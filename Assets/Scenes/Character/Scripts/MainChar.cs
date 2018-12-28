@@ -24,11 +24,15 @@ public class MainChar : MonoBehaviour {
         moment = Input.GetAxis("Horizontal");
         if (moment > 0f)
         {
+            Debug.Log("vao day roi");
+            Debug.Log(transform.position);
             rigidBody.velocity = new Vector2(moment * speed, rigidBody.velocity.y);
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else if(moment < 0)
         {
+            Debug.Log("vao day roi");
+            Debug.Log(transform.position);
             rigidBody.velocity = new Vector2(moment * speed, rigidBody.velocity.y);
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }

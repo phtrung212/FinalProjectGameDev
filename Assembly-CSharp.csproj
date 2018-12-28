@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{16DD1D4B-0017-C897-AC70-0D4740C4ACC9}</ProjectGuid>
+    <ProjectGuid>{1AFAC700-864D-C7A7-36BD-98734B188DC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -28,7 +28,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,7 +37,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -64,13 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Character\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Scenes\Character\Scripts\HPPlayerManager.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
     <Compile Include="Assets\Scenes\Quai\AutoAttack.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalProjectGameDev/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalProjectGameDev/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

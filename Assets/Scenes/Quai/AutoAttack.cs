@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
-
+    public int bloodLoss;
     public GameObject player;
     public float speed = 5f;
     public float jumpSpeed = 10f;
     private Rigidbody2D rigidBody;
     private Animator playerAnimation;
     bool flag;
+    private HPPlayerManager gameHPManager;
+    public int count;
+    public int temp;
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
+        gameHPManager = FindObjectOfType<HPPlayerManager>();
         flag = false;
     }
 	
@@ -25,6 +29,15 @@ public class AutoAttack : MonoBehaviour {
             Debug.Log(Mathf.Abs(player.transform.position.x - transform.position.x));
             if (Mathf.Abs(player.transform.position.x - transform.position.x) < 3.5)
             {
+                if (count == temp)
+                {
+                    gameHPManager.bloodLoss(bloodLoss);
+                    temp = 0;
+                }
+                else
+                {
+                    temp++;
+                }
                 playerAnimation.SetBool("Attack", true);
             }
             else
