@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b760dcabeb52b884f8810c4792470638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPMax: 200
   speed: 5
   jumpSpeed: 10
   groundCheckPoint: {fileID: 88286768}
@@ -1318,6 +1319,8 @@ MonoBehaviour:
     m_Bits: 512
   QuaiCheckPoint: {fileID: 667988973}
   QuaiCheckRadius: 0.5
+  pfHealthBar: {fileID: 4267905314970898, guid: 59079f1acf282734783fca00398c68e5,
+    type: 2}
 --- !u!95 &708143485
 Animator:
   serializedVersion: 3

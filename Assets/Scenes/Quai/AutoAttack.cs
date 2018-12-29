@@ -50,7 +50,8 @@ public class AutoAttack : MonoBehaviour {
             {
                 if (count == temp)
                 {
-                    gameHPManager.bloodLoss(bloodLoss);
+                    //gameHPManager.bloodLoss(bloodLoss);
+                    player.GetComponent<MainChar>().HP.Damage(bloodLoss);
                     temp = 0;
                 }
                 else
@@ -80,6 +81,7 @@ public class AutoAttack : MonoBehaviour {
         }
         else
         {
+            playerAnimation.SetBool("Attack", false);
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             playerAnimation.SetFloat("Speed", 0f);
         }
@@ -97,7 +99,8 @@ public class AutoAttack : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("bbbbbb");
+            if (HP.getHP() > 0)
+            HP.returnHP();
             flag = false;
         }
     }

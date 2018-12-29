@@ -5,6 +5,7 @@ using UnityEngine;
 
 
 public class MainChar : MonoBehaviour {
+    public int HPMax;
     public float speed = 5f;
     public float jumpSpeed = 10f;
     private float moment = 0f;
@@ -18,16 +19,30 @@ public class MainChar : MonoBehaviour {
     public LayerMask QuaiLayer;
     public Transform QuaiCheckPoint;
     public float QuaiCheckRadius;
+    public Transform pfHealthBar;
+    Transform healthBarTransform;
+    HealthBar healthBar;
+    public QuaiHPManager HP;
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         attack1 = -1;
+        HP = new QuaiHPManager(HPMax);
+        healthBarTransform = Instantiate(pfHealthBar, new Vector3(transform.position.x - 2f, transform.position.y + 2.5f), Quaternion.identity);
+        healthBar = healthBarTransform.GetComponent<HealthBar>();
+        healthBar.setup(HP);
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthBar.transform.position = new Vector3(transform.position.x - 2.5f, transform.position.y + 3f);
+        if (HP.getHP() <= 0)
+        {
+            HP.returnHP();
+            transform.position = new Vector3(0.09f, -3.170004f, transform.position.z);
+        }
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
         moment = Input.GetAxis("Horizontal");
         if (moment > 0f)
