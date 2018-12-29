@@ -16,7 +16,7 @@ public class AutoAttack : MonoBehaviour {
     int temp1;
     public float PhamViAttack;
     public int HPinput;
-    QuaiHPManager HP;
+    public QuaiHPManager HP;
     //public HealthBar healthBar;
     public Transform pfHealthBar;
     Transform healthBarTransform;
@@ -51,7 +51,6 @@ public class AutoAttack : MonoBehaviour {
                 if (count == temp)
                 {
                     gameHPManager.bloodLoss(bloodLoss);
-                    HP.Damage(10);
                     temp = 0;
                 }
                 else
@@ -102,4 +101,6 @@ public class AutoAttack : MonoBehaviour {
             flag = false;
         }
     }
+
+   
 }

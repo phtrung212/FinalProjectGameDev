@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class MainChar : MonoBehaviour {
     public float speed = 5f;
     public float jumpSpeed = 10f;
@@ -13,11 +15,14 @@ public class MainChar : MonoBehaviour {
     private bool isTouchingGround;
     private Animator playerAnimation;
     int attack1;
+    public LayerMask QuaiLayer;
+    public Transform QuaiCheckPoint;
+    public float QuaiCheckRadius;
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
-        attack1 = 100;
+        attack1 = -1;
     }
 
     // Update is called once per frame
@@ -51,27 +56,33 @@ public class MainChar : MonoBehaviour {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
         }
         playerAnimation.SetBool("onGround", isTouchingGround);
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1) && attack1 == 100)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && attack1 == -1)
         {
-                playerAnimation.SetBool("attack1", true);
-                attack1 = 0;
-        } 
+            playerAnimation.SetBool("attack1", true);
+            Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, QuaiLayer);
+            if (enemiesToDamege.Length > 0)
+                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(20);
+
+            attack1++;
+        }
         else
         {
-            if (attack1 < 100)
+            if (attack1 < 100 && attack1 >= 0)
             {
                 playerAnimation.SetBool("attack1", true);
                 attack1++;
             }
             else
             {
+                attack1 = -1;
                 playerAnimation.SetBool("attack1", false);
             }
         }
-        
+
+
+
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {

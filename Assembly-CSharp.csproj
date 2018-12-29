@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\Character\Scripts\Attack.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\HPPlayerManager.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
