@@ -94,6 +94,7 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, QuaiLayer);
             if (enemiesToDamege.Length > 0)
             {
+                Debug.Log("aaaaaaa");
                 enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
             }
 
