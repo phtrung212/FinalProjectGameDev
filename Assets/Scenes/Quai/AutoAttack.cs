@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public string name;
+    public LayerMask PlayerLayer;
+    public float PhamViMin;
+    public float PhamViMax;
+    public float PlayerCheckRadius;
+    public Transform PlayerCheckPoint;
     public GameObject enemy;
     public int bloodLoss;
     public GameObject player;
@@ -22,6 +28,7 @@ public class AutoAttack : MonoBehaviour {
     public Transform pfHealthBar;
     Transform healthBarTransform;
     HealthBar healthBar;
+    Collider2D[] enemiesToDamege;
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -38,17 +45,30 @@ public class AutoAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(PlayerCheckPoint.position);
+        Debug.Log(PlayerCheckRadius);
+        enemiesToDamege = Physics2D.OverlapCircleAll(PlayerCheckPoint.position, PlayerCheckRadius, PlayerLayer);
+        if (enemiesToDamege.Length > 0) {
+            Debug.Log(enemiesToDamege.Length);
+            flag = true;
+        }
+        else
+            flag = false;
+
         healthBar.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 2.5f);
         if (HP.getHP() <= 0)
         {
+            player.GetComponent<MainChar>().cancalAttacking(name);
             enemy.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);
             Instantiate(enemy);
         }
-        if (flag == true)
+        if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViMax && Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) >= PhamViMin)
         {
-            Debug.Log("ccccc");
-            if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x,2)+ Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViAttack)
+            if (HP.getHP() > 0)
+                player.GetComponent<MainChar>().setAttacking(name);
+            Debug.Log(flag);
+            if (flag)
             {
                 if (count == temp)
                 {
@@ -83,6 +103,9 @@ public class AutoAttack : MonoBehaviour {
         }
         else
         {
+            player.GetComponent<MainChar>().cancalAttacking(name);
+            if (HP.getHP() > 0)
+            HP.returnHP();
             playerAnimation.SetBool("Attack", false);
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             playerAnimation.SetFloat("Speed", 0f);
@@ -91,20 +114,11 @@ public class AutoAttack : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            Debug.Log("aaaaa");
-            flag = true;
-        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            if (HP.getHP() > 0)
-            HP.returnHP();
-            flag = false;
-        }
+        
     }
 
    

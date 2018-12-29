@@ -5,8 +5,12 @@ using UnityEngine;
 
 
 public class MainChar : MonoBehaviour {
+    public int dame;
+    public string whoIsUsing;
+    public bool isAttacking;
     public Camera Camera;
     public int HPMax;
+    public int ManaMax;
     public float speed = 5f;
     public float jumpSpeed = 10f;
     private float moment = 0f;
@@ -24,8 +28,14 @@ public class MainChar : MonoBehaviour {
     Transform healthBarTransform;
     HealthBar healthBar;
     public QuaiHPManager HP;
+    public Transform pfManaBar;
+    Transform ManaBarTransform;
+    HealthBar ManaBar;
+    public QuaiHPManager Mana;
     // Use this for initialization
     void Start () {
+        isAttacking = false;
+        whoIsUsing = "";
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         attack1 = -1;
@@ -33,12 +43,17 @@ public class MainChar : MonoBehaviour {
         healthBarTransform = Instantiate(pfHealthBar, new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f), Quaternion.identity);
         healthBar = healthBarTransform.GetComponent<HealthBar>();
         healthBar.setup(HP);
+        Mana = new QuaiHPManager(ManaMax);
+        ManaBarTransform = Instantiate(pfManaBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y -1.5f), Quaternion.identity);
+        ManaBar = ManaBarTransform.GetComponent<HealthBar>();
+        ManaBar.setup(Mana);
     }
 
     // Update is called once per frame
     void Update()
     {
         healthBar.transform.position = new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f);
+        ManaBar.transform.position = new Vector3(Camera.transform.position.x - 7.1f, Camera.transform.position.y +5.95f);
         if (HP.getHP() <= 0)
         {
             HP.returnHP();
@@ -67,17 +82,20 @@ public class MainChar : MonoBehaviour {
             playerAnimation.SetFloat("Speed", 0);
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
-        if (Input.GetButtonDown("Jump") && isTouchingGround)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && isAttacking == false)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
         }
         playerAnimation.SetBool("onGround", isTouchingGround);
         if (Input.GetKeyDown(KeyCode.Alpha1) && attack1 == -1)
         {
+            Mana.Damage(2);
             playerAnimation.SetBool("attack1", true);
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, QuaiLayer);
             if (enemiesToDamege.Length > 0)
-                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(20);
+            {
+                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
+            }
 
             attack1++;
         }
@@ -96,15 +114,26 @@ public class MainChar : MonoBehaviour {
         }
 
 
-
     }
 
-
-    void OnTriggerEnter2D(Collider2D collision)
+    public void setAttacking(string name)
     {
-        if (collision.tag == "Quai")
+        if (whoIsUsing == "")
         {
-            
+            this.whoIsUsing = name;
+            isAttacking = true;
         }
     }
+
+    public void cancalAttacking(string name)
+    {
+        if (whoIsUsing == name)
+        {
+            this.whoIsUsing = "";
+            isAttacking = false;
+        }
+    }
+
+
+   
 }

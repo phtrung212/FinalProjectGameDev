@@ -9,22 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1431144666657548}
+  m_RootGameObject: {fileID: 1162503129334780}
   m_IsPrefabParent: 1
---- !u!1 &1431144666657548
+--- !u!1 &1162503129334780
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4682390812408468}
-  - component: {fileID: 212939119755480480}
-  - component: {fileID: 60949385286093468}
-  - component: {fileID: 95099229423672876}
-  - component: {fileID: 114733272277744952}
-  - component: {fileID: 50316591705935108}
-  - component: {fileID: 58998502252776692}
+  - component: {fileID: 4746210692189870}
+  - component: {fileID: 212736148172782788}
+  - component: {fileID: 60850059676637374}
+  - component: {fileID: 95585404473624718}
+  - component: {fileID: 114129999761206610}
+  - component: {fileID: 50465532787759186}
   m_Layer: 9
   m_Name: Quai1
   m_TagString: Quai
@@ -32,26 +31,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4682390812408468
+--- !u!1 &1575167253944328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4408127974967758}
+  - component: {fileID: 58056069983903270}
+  m_Layer: 11
+  m_Name: PlayerCheckPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4408127974967758
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0503654, y: -4.134302, z: -0.1}
-  m_LocalScale: {x: 0.21664174, y: 0.21664174, z: 0.21664174}
+  m_GameObject: {fileID: 1575167253944328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.3, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 4746210692189870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4746210692189870
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162503129334780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.8555136, y: -2.4117808, z: -0.1}
+  m_LocalScale: {x: 0.21664174, y: 0.21664174, z: 0.21664174}
+  m_Children:
+  - {fileID: 4408127974967758}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50316591705935108
+--- !u!50 &50465532787759186
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1162503129334780}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -65,27 +94,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58998502252776692
+--- !u!58 &58056069983903270
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1575167253944328}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0000009536743}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 30
---- !u!60 &60949385286093468
+  m_Radius: 4
+--- !u!60 &60850059676637374
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1162503129334780}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 516653c59f5ede94f9877fb8fd99cd3f, type: 2}
@@ -438,13 +467,13 @@ PolygonCollider2D:
       - {x: 5.345, y: 0.11}
       - {x: 5.325, y: 0.13}
       - {x: 5.295, y: 0.12}
---- !u!95 &95099229423672876
+--- !u!95 &95585404473624718
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1162503129334780}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 006cceb61f3a77b48a0f3a48528dbcdc, type: 2}
@@ -456,18 +485,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114733272277744952
+--- !u!114 &114129999761206610
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1162503129334780}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eefcd363345d4574189721b9a3b54990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  PhamViMin: 0
+  PhamViMax: 7
+  PlayerCheckRadius: 0.4
+  PlayerCheckPoint: {fileID: 4408127974967758}
+  enemy: {fileID: 1552572824978182, guid: a7a0b02e886ac7c43993cb8e7703ed29, type: 2}
   bloodLoss: 20
   player: {fileID: 0}
   speed: 1
@@ -478,12 +514,12 @@ MonoBehaviour:
   HPinput: 100
   pfHealthBar: {fileID: 4267905314970898, guid: 59079f1acf282734783fca00398c68e5,
     type: 2}
---- !u!212 &212939119755480480
+--- !u!212 &212736148172782788
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1431144666657548}
+  m_GameObject: {fileID: 1162503129334780}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
