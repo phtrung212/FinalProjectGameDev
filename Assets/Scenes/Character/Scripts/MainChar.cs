@@ -5,6 +5,7 @@ using UnityEngine;
 
 
 public class MainChar : MonoBehaviour {
+    public Camera Camera;
     public int HPMax;
     public float speed = 5f;
     public float jumpSpeed = 10f;
@@ -29,7 +30,7 @@ public class MainChar : MonoBehaviour {
         playerAnimation = GetComponent<Animator>();
         attack1 = -1;
         HP = new QuaiHPManager(HPMax);
-        healthBarTransform = Instantiate(pfHealthBar, new Vector3(transform.position.x - 2f, transform.position.y + 2.5f), Quaternion.identity);
+        healthBarTransform = Instantiate(pfHealthBar, new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f), Quaternion.identity);
         healthBar = healthBarTransform.GetComponent<HealthBar>();
         healthBar.setup(HP);
     }
@@ -37,13 +38,13 @@ public class MainChar : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        healthBar.transform.position = new Vector3(transform.position.x - 2.5f, transform.position.y + 3f);
+        healthBar.transform.position = new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f);
         if (HP.getHP() <= 0)
         {
             HP.returnHP();
             transform.position = new Vector3(0.09f, -3.170004f, transform.position.z);
         }
-        isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+        isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer) || Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, QuaiLayer);
         moment = Input.GetAxis("Horizontal");
         if (moment > 0f)
         {

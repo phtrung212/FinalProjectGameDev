@@ -18,5 +18,5 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Find("Bar").localScale = new Vector3(quaiHPManager.getHealthPercent(), 1,1);
-	}
+    }
 }

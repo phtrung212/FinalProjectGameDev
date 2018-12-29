@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public GameObject enemy;
     public int bloodLoss;
     public GameObject player;
     public float speed = 5f;
@@ -40,12 +41,13 @@ public class AutoAttack : MonoBehaviour {
         healthBar.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 2.5f);
         if (HP.getHP() <= 0)
         {
+            enemy.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);
+            Instantiate(enemy);
         }
         if (flag == true)
         {
             Debug.Log("ccccc");
-            Debug.Log(Mathf.Abs(player.transform.position.x - transform.position.x));
             if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x,2)+ Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViAttack)
             {
                 if (count == temp)
