@@ -13,25 +13,45 @@ public class AutoAttack : MonoBehaviour {
     private HPPlayerManager gameHPManager;
     public int count;
     public int temp;
+    int temp1;
+    public float PhamViAttack;
+    public int HPinput;
+    QuaiHPManager HP;
+    //public HealthBar healthBar;
+    public Transform pfHealthBar;
+    Transform healthBarTransform;
+    HealthBar healthBar;
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         gameHPManager = FindObjectOfType<HPPlayerManager>();
         flag = false;
+        temp1 = temp;
+        HP = new QuaiHPManager(HPinput);
+        
+        healthBarTransform = Instantiate(pfHealthBar, new Vector3(transform.position.x-2f, transform.position.y+2.5f), Quaternion.identity);
+        healthBar = healthBarTransform.GetComponent<HealthBar>();
+        healthBar.setup(HP);
     }
 	
 	// Update is called once per frame
 	void Update () {
+        healthBar.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 2.5f);
+        if (HP.getHP() <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (flag == true)
         {
             Debug.Log("ccccc");
             Debug.Log(Mathf.Abs(player.transform.position.x - transform.position.x));
-            if (Mathf.Abs(player.transform.position.x - transform.position.x) < 3.5)
+            if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x,2)+ Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViAttack)
             {
                 if (count == temp)
                 {
                     gameHPManager.bloodLoss(bloodLoss);
+                    HP.Damage(10);
                     temp = 0;
                 }
                 else
@@ -42,6 +62,7 @@ public class AutoAttack : MonoBehaviour {
             }
             else
             {
+                temp = temp1;
                 Debug.Log("ccccc11");
                 if (player.transform.position.x < transform.position.x)
                 {

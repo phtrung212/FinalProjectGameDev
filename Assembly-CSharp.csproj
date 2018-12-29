@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scenes\Character\Scripts\HPPlayerManager.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
     <Compile Include="Assets\Scenes\Quai\AutoAttack.cs" />
+    <Compile Include="Assets\Scenes\Quai\HealthBar.cs" />
+    <Compile Include="Assets\Scenes\Quai\QuaiHPManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalProjectGameDev/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
