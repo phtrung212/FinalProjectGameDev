@@ -5,7 +5,7 @@ public class ExperenceManager
     private int lvCurent;
     private int ExperenceCurrent;
 
-    public ExperenceManager()
+    public ExperenceManager(int level)
     {
         arrayLv = new int[100];
         arrayLv[0] = 100;
@@ -14,6 +14,7 @@ public class ExperenceManager
             arrayLv[i] = arrayLv[i-1]*2;
         }
         ExperenceCurrent = 0;
+        lvCurent = level;
     }
 
     public void increase(int experence)

@@ -5,6 +5,7 @@ using UnityEngine;
 
 
 public class MainChar : MonoBehaviour {
+    public int level;
     public int dame;
     public string whoIsUsing;
     public bool isAttacking;
@@ -51,7 +52,7 @@ public class MainChar : MonoBehaviour {
         ManaBarTransform = Instantiate(pfManaBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y -1.5f), Quaternion.identity);
         ManaBar = ManaBarTransform.GetComponent<HealthBar>();
         ManaBar.setup(Mana);
-        Experence = new ExperenceManager();
+        Experence = new ExperenceManager(level);
         LVBarTransform = Instantiate(pfLVBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y - 1.5f), Quaternion.identity);
         LVBar = LVBarTransform.GetComponent<LevelBar>();
         LVBar.setup(Experence);
@@ -105,6 +106,10 @@ public class MainChar : MonoBehaviour {
             {
                 Debug.Log("aaaaaaa");
                 enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                int damgBlood = (int)damg;
+                if (damgBlood > 0)
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
             }
 
             attack1++;

@@ -11,7 +11,10 @@ public class QuaiHPManager {
 
     public void Damage(int dameageAmount)
     {
-        HPCurrent = HPCurrent - dameageAmount;
+        if (HPCurrent < dameageAmount)
+            HPCurrent = 0;
+        else
+            HPCurrent = HPCurrent - dameageAmount;
     }
 
     public float getHealthPercent()

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public float high = 2.5f;
+    public float weigh = -2f;
+    public int Level;
     public int experence;
     public string name;
     public LayerMask PlayerLayer;
@@ -39,7 +42,7 @@ public class AutoAttack : MonoBehaviour {
         temp1 = temp;
         HP = new QuaiHPManager(HPinput);
         
-        healthBarTransform = Instantiate(pfHealthBar, new Vector3(transform.position.x-2f, transform.position.y+2.5f), Quaternion.identity);
+        healthBarTransform = Instantiate(pfHealthBar, new Vector3(transform.position.x+weigh, transform.position.y+high), Quaternion.identity);
         healthBar = healthBarTransform.GetComponent<HealthBar>();
         healthBar.setup(HP);
     }
@@ -56,7 +59,7 @@ public class AutoAttack : MonoBehaviour {
         else
             flag = false;
 
-        healthBar.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 2.5f);
+        healthBar.transform.position = new Vector3(transform.position.x + weigh, transform.position.y + high);
         if (HP.getHP() <= 0)
         {
             player.GetComponent<MainChar>().Experence.increase(experence);
@@ -74,8 +77,10 @@ public class AutoAttack : MonoBehaviour {
             {
                 if (count == temp)
                 {
-                    //gameHPManager.bloodLoss(bloodLoss);
-                    player.GetComponent<MainChar>().HP.Damage(bloodLoss);
+                    float damg = bloodLoss + (Level - player.GetComponent<MainChar>().Experence.getLevel()) * 0.1f* bloodLoss;
+                    int damgBlood = (int)damg;
+                    if (damgBlood > 0)
+                        player.GetComponent<MainChar>().HP.Damage(damgBlood);
                     temp = 0;
                 }
                 else
