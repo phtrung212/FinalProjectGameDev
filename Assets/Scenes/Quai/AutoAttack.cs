@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public int experence;
     public string name;
     public LayerMask PlayerLayer;
     public float PhamViMin;
@@ -58,6 +59,7 @@ public class AutoAttack : MonoBehaviour {
         healthBar.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 2.5f);
         if (HP.getHP() <= 0)
         {
+            player.GetComponent<MainChar>().Experence.increase(experence);
             player.GetComponent<MainChar>().cancalAttacking(name);
             enemy.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);

@@ -190,6 +190,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 708143479}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: name
+      value: chap1_1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabParent: 0
@@ -280,6 +290,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 708143479}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: name
+      value: chap1_2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabParent: 0
@@ -331,6 +351,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 708143479}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: name
+      value: chap1_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabParent: 0
@@ -645,6 +675,7 @@ MonoBehaviour:
   pfHealthBar: {fileID: 4888585547054354, guid: af7bccee4be3821498c335a6c999d9da,
     type: 2}
   pfManaBar: {fileID: 4183519291409606, guid: 0d6749048a2768e4495de96e536ce9b9, type: 2}
+  pfLVBar: {fileID: 4783561194755984, guid: bbe15edf06e9f9740b322ee41cca240e, type: 2}
 --- !u!95 &708143485
 Animator:
   serializedVersion: 3

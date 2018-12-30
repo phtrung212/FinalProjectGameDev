@@ -32,6 +32,10 @@ public class MainChar : MonoBehaviour {
     Transform ManaBarTransform;
     HealthBar ManaBar;
     public QuaiHPManager Mana;
+    public Transform pfLVBar;
+    Transform LVBarTransform;
+    LevelBar LVBar;
+    public ExperenceManager Experence;
     // Use this for initialization
     void Start () {
         isAttacking = false;
@@ -47,6 +51,10 @@ public class MainChar : MonoBehaviour {
         ManaBarTransform = Instantiate(pfManaBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y -1.5f), Quaternion.identity);
         ManaBar = ManaBarTransform.GetComponent<HealthBar>();
         ManaBar.setup(Mana);
+        Experence = new ExperenceManager();
+        LVBarTransform = Instantiate(pfLVBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y - 1.5f), Quaternion.identity);
+        LVBar = LVBarTransform.GetComponent<LevelBar>();
+        LVBar.setup(Experence);
     }
 
     // Update is called once per frame
@@ -54,6 +62,7 @@ public class MainChar : MonoBehaviour {
     {
         healthBar.transform.position = new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f);
         ManaBar.transform.position = new Vector3(Camera.transform.position.x - 7.1f, Camera.transform.position.y +5.95f);
+        LVBar.transform.position = new Vector3(Camera.transform.position.x - 19.2f, Camera.transform.position.y - 2.35f);
         if (HP.getHP() <= 0)
         {
             HP.returnHP();

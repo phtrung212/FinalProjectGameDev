@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Character\Scripts\Attack.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Scenes\Character\Scripts\ExperenceManager.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\HPPlayerManager.cs" />
+    <Compile Include="Assets\Scenes\Character\Scripts\LevelBar.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
     <Compile Include="Assets\Scenes\Quai\AutoAttack.cs" />
     <Compile Include="Assets\Scenes\Quai\HealthBar.cs" />
