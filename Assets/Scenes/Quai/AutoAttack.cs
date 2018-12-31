@@ -105,6 +105,10 @@ public class AutoAttack : MonoBehaviour {
                     rigidBody.velocity = new Vector2(Mathf.Abs(speed), rigidBody.velocity.y);
                     transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
                 }
+                else
+                {
+                    rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
+                }
                 playerAnimation.SetFloat("Speed", 0.2f);
                 playerAnimation.SetBool("Attack", false);
             }

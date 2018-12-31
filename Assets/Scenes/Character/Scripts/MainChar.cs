@@ -47,6 +47,9 @@ public class MainChar : MonoBehaviour {
     public int experenceCurence;
     public ExperenceManager Experence;
     public float speedCurrence;
+    public GameObject HPBar;
+    public GameObject manaBar;
+    public GameObject expBar;
     // Use this for initialization
     void Start () {
         
@@ -65,16 +68,13 @@ public class MainChar : MonoBehaviour {
         playerAnimation = GetComponent<Animator>();
         attack1 = -1;
         HP = new QuaiHPManager(HPMax);
-        healthBarTransform = Instantiate(pfHealthBar, new Vector3(Camera.transform.position.x - 7.39f, Camera.transform.position.y+6.19f), Quaternion.identity);
-        healthBar = healthBarTransform.GetComponent<HealthBar>();
+        healthBar = HPBar.GetComponent<HealthBar>();
         healthBar.setup(HP);
         Mana = new QuaiHPManager(ManaMax);
-        ManaBarTransform = Instantiate(pfManaBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y -1.5f), Quaternion.identity);
-        ManaBar = ManaBarTransform.GetComponent<HealthBar>();
+        ManaBar = manaBar.GetComponent<HealthBar>();
         ManaBar.setup(Mana);
         Experence = new ExperenceManager(level, experenceCurence);
-        LVBarTransform = Instantiate(pfLVBar, new Vector3(Camera.transform.position.x + 1.39f, Camera.transform.position.y - 1.5f), Quaternion.identity);
-        LVBar = LVBarTransform.GetComponent<LevelBar>();
+        LVBar = expBar.GetComponent<LevelBar>();
         LVBar.setup(Experence);
     }
 
@@ -90,9 +90,6 @@ public class MainChar : MonoBehaviour {
         int ManaMaxTemp = (int)Mana.getHPMax();
         ManaText.text = ManaCurrenceTemp.ToString() + "/" + ManaMaxTemp.ToString();
         ExperenceText.text = Experence.getExperence().ToString() + "/" + Experence.getExperenceNextLV().ToString();
-        healthBar.transform.position = new Vector3(Camera.transform.position.x - 11.76f, Camera.transform.position.y + 6.14f);
-        ManaBar.transform.position = new Vector3(Camera.transform.position.x - 11.47f, Camera.transform.position.y + 5.9f);
-        LVBar.transform.position = new Vector3(Camera.transform.position.x - 29.66f, Camera.transform.position.y -1f);
         Collider2D[] NPC = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, NPCLayer);
         if (NPC.Length > 0)
         {
