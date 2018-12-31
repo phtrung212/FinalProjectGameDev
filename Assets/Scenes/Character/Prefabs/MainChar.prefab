@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4881629755114262}
   - component: {fileID: 114211494734763204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HP
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4790248817363096}
   - component: {fileID: 58089369103781746}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: QuaiCheckPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4870555254335424}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: groundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 95434386155876552}
   - component: {fileID: 61932318037056954}
   m_Layer: 10
-  m_Name: Char
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,9 +86,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4712626512953426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MainChar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675581112819136}
   m_LocalRotation: {x: -0.002961647, y: -0.004124216, z: -0.0010800877, w: 0.9999865}
-  m_LocalPosition: {x: 0.67, y: -3.11, z: 0.01}
-  m_LocalScale: {x: 0.3414029, y: 0.341403, z: 0.34140283}
+  m_LocalPosition: {x: 41.781696, y: -2.5699074, z: 0.01}
+  m_LocalScale: {x: 0.3414029, y: 0.341403, z: 0}
   m_Children:
   - {fileID: 4870555254335424}
   - {fileID: 4790248817363096}
@@ -213,7 +213,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
+    oldSize: {x: 6.19, y: 8.64}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 1000
-  HPCurrent: 0
+  HPCurrent: 1000
   player: {fileID: 1675581112819136}
 --- !u!114 &114444319528102388
 MonoBehaviour:
@@ -265,13 +265,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b760dcabeb52b884f8810c4792470638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lv: {fileID: 0}
+  HPText: {fileID: 0}
+  ManaText: {fileID: 0}
+  ExperenceText: {fileID: 0}
+  NPCLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   name: 
-  level: 5
-  dame: 20
-  whoIsUsing: 
-  isAttacking: 0
+  level: 3
+  dame: 25
+  whoIsUsing: chap1_1
+  isAttacking: 1
   Camera: {fileID: 0}
-  HPMax: 1000
+  HPMax: 500
   ManaMax: 100
   speed: 5
   jumpSpeed: 10
@@ -289,7 +296,11 @@ MonoBehaviour:
     type: 2}
   pfManaBar: {fileID: 4183519291409606, guid: 0d6749048a2768e4495de96e536ce9b9, type: 2}
   pfLVBar: {fileID: 4783561194755984, guid: bbe15edf06e9f9740b322ee41cca240e, type: 2}
-  experenceCurence: 0
+  experenceCurence: 710
+  speedCurrence: 2
+  HPBar: {fileID: 0}
+  manaBar: {fileID: 0}
+  expBar: {fileID: 0}
 --- !u!212 &212605401193071474
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -325,7 +336,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7fdc7bfdd8c974742bdd5e6b5b25e7dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42bb860de44a7ed4faa293b885053c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
