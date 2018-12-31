@@ -1,11 +1,13 @@
 ﻿
+using System.Diagnostics;
+
 public class ExperenceManager
 {
     int[] arrayLv;
     private int lvCurent;
     private int ExperenceCurrent;
 
-    public ExperenceManager(int level)
+    public ExperenceManager(int level, int ExperenceCurrent)
     {
         arrayLv = new int[100];
         arrayLv[0] = 100;
@@ -13,7 +15,7 @@ public class ExperenceManager
         {
             arrayLv[i] = arrayLv[i-1]*2;
         }
-        ExperenceCurrent = 0;
+        this.ExperenceCurrent = ExperenceCurrent;
         lvCurent = level;
     }
 
@@ -24,12 +26,18 @@ public class ExperenceManager
         {
             ExperenceCurrent = ExperenceCurrent - arrayLv[lvCurent];
             lvCurent++;
+            Debug.WriteLine(lvCurent);
         }
     }
 
     public float getExperencePercent()
     {
         return (float)ExperenceCurrent / arrayLv[lvCurent];
+    }
+
+    public int getExperenceNextLV()
+    {
+        return arrayLv[lvCurent];
     }
     public int getExperence()
     {

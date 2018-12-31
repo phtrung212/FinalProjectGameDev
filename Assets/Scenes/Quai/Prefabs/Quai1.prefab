@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162503129334780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.342715, y: -1.4460319, z: -0.1}
-  m_LocalScale: {x: 0.21664174, y: 0.21664174, z: 0.21664174}
+  m_LocalPosition: {x: 20, y: -3.35, z: -0.1}
+  m_LocalScale: {x: -0.2166417, y: 0.21664174, z: 0.21664174}
   m_Children:
   - {fileID: 4408127974967758}
   m_Father: {fileID: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 11.964036, y: 7.4086576}
   m_EdgeRadius: 0
@@ -163,11 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefcd363345d4574189721b9a3b54990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PhamViMaxCurrence: 0
+  cre: 0.4
   high: 2.5
   weigh: -2
-  Level: 0
+  Level: 1
   experence: 0
-  name: chap1_3
+  name: chap1_1
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -176,7 +178,7 @@ MonoBehaviour:
   PlayerCheckRadius: 0.4
   PlayerCheckPoint: {fileID: 4408127974967758}
   enemy: {fileID: 1552572824978182, guid: a7a0b02e886ac7c43993cb8e7703ed29, type: 2}
-  bloodLoss: 20
+  bloodLoss: 10
   player: {fileID: 0}
   speed: 1
   jumpSpeed: 10

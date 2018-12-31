@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class LevelBar : MonoBehaviour
 {
 
     private ExperenceManager experenceManager;
-
+    
     public void setup(ExperenceManager experenceManager)
     {
         this.experenceManager = experenceManager;

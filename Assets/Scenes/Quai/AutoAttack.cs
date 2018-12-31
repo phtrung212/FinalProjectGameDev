@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public float PhamViMaxCurrence;
+    public float cre;
     public float high = 2.5f;
     public float weigh = -2f;
     public int Level;
@@ -35,6 +37,7 @@ public class AutoAttack : MonoBehaviour {
     Collider2D[] enemiesToDamege;
     // Use this for initialization
     void Start () {
+        PhamViMaxCurrence = PhamViMax;
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         gameHPManager = FindObjectOfType<HPPlayerManager>();
@@ -49,11 +52,8 @@ public class AutoAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(PlayerCheckPoint.position);
-        Debug.Log(PlayerCheckRadius);
         enemiesToDamege = Physics2D.OverlapCircleAll(PlayerCheckPoint.position, PlayerCheckRadius, PlayerLayer);
         if (enemiesToDamege.Length > 0) {
-            Debug.Log(enemiesToDamege.Length);
             flag = true;
         }
         else
@@ -68,11 +68,11 @@ public class AutoAttack : MonoBehaviour {
             Destroy(gameObject);
             Instantiate(enemy);
         }
-        if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViMax && Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) >= PhamViMin)
+        if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViMaxCurrence && Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) >= PhamViMin)
         {
+            PhamViMaxCurrence = 20;
             if (HP.getHP() > 0)
                 player.GetComponent<MainChar>().setAttacking(name);
-            Debug.Log(flag);
             if (flag)
             {
                 if (count == temp)
@@ -80,7 +80,10 @@ public class AutoAttack : MonoBehaviour {
                     float damg = bloodLoss + (Level - player.GetComponent<MainChar>().Experence.getLevel()) * 0.1f* bloodLoss;
                     int damgBlood = (int)damg;
                     if (damgBlood > 0)
+                    {
+                        player.GetComponent<MainChar>().setSpeedCurrence(cre);
                         player.GetComponent<MainChar>().HP.Damage(damgBlood);
+                    }
                     temp = 0;
                 }
                 else
@@ -92,14 +95,12 @@ public class AutoAttack : MonoBehaviour {
             else
             {
                 temp = temp1;
-                Debug.Log("ccccc11");
-                if (player.transform.position.x < transform.position.x)
+                if (player.transform.position.x - transform.position.x < -3)
                 {
-                    Debug.Log(flag);
                     rigidBody.velocity = new Vector2(-Mathf.Abs(speed), rigidBody.velocity.y);
                     transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
                 }
-                else if (player.transform.position.x > transform.position.x)
+                else if (player.transform.position.x - transform.position.x > 3)
                 {
                     rigidBody.velocity = new Vector2(Mathf.Abs(speed), rigidBody.velocity.y);
                     transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
@@ -110,6 +111,7 @@ public class AutoAttack : MonoBehaviour {
         }
         else
         {
+            PhamViMaxCurrence = PhamViMax;
             player.GetComponent<MainChar>().cancalAttacking(name);
             if (HP.getHP() > 0)
             HP.returnHP();

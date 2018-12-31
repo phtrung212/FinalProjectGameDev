@@ -26,6 +26,11 @@ public class QuaiHPManager {
         return HPCurrent;
     }
 
+    public int getHPMax()
+    {
+        return HP;
+    }
+
     public void returnHP()
     {
         HPCurrent = HP;
