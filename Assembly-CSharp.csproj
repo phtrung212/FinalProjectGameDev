@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scenes\Character\Scripts\Attack.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\ExperenceManager.cs" />
+    <Compile Include="Assets\Scenes\Character\Scripts\HealthBarChar.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\HPPlayerManager.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\LevelBar.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
@@ -74,11 +75,11 @@
     <Compile Include="Assets\Scenes\Quai\HealthBar.cs" />
     <Compile Include="Assets\Scenes\Quai\QuaiHPManager.cs" />
     <Compile Include="Assets\Scenes\Quit.cs" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalProjectGameDev/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Huu Tuan/Desktop/FinalGame/FinalProjectGameDev/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Huu Tuan/Desktop/GameCuoiKy/FinalProjectGameDev/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/Huu Tuan/Desktop/GameCuoiKy/FinalProjectGameDev/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
