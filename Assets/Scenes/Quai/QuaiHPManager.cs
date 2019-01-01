@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Diagnostics;
+
 public class QuaiHPManager {
 
     private int HP;
@@ -15,6 +18,12 @@ public class QuaiHPManager {
             HPCurrent = 0;
         else
             HPCurrent = HPCurrent - dameageAmount;
+    }
+
+    public void setHPMax(int hp)
+    {
+        HP = hp;
+        HPCurrent = HP;
     }
 
     public float getHealthPercent()

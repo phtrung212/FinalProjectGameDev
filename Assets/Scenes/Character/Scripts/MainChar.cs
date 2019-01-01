@@ -73,7 +73,7 @@ public class MainChar : MonoBehaviour {
         Mana = new QuaiHPManager(ManaMax);
         ManaBar = manaBar.GetComponent<HealthBar>();
         ManaBar.setup(Mana);
-        Experence = new ExperenceManager(level, experenceCurence);
+        Experence = new ExperenceManager(level, experenceCurence,ref HP, ref Mana);
         LVBar = expBar.GetComponent<LevelBar>();
         LVBar.setup(Experence);
     }
