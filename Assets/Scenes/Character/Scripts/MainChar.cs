@@ -4,12 +4,15 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainChar : MonoBehaviour {
     public Text lv;
     public Text HPText;
     public Text ManaText;
     public Text ExperenceText;
+    public Text Note;
+    public Text Note2;
     public LayerMask NPCLayer;
     public string name;
     string filename = "dataplayer.gd";
@@ -52,7 +55,7 @@ public class MainChar : MonoBehaviour {
     public GameObject expBar;
     // Use this for initialization
     void Start () {
-        
+        this.tag = "Player";
         speedCurrence = speed;
         database dataBase = readData();
         level = dataBase.lv;
@@ -80,6 +83,18 @@ public class MainChar : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (isAttacking == true)
+        {
+            Note.text = "Tiến nhập chiến đấu trung.";
+        }
+        else
+        {
+            Note.text = "";
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
         //database dataBase = readData();
         //level = dataBase.lv;
         lv.text = Experence.getLevel().ToString();

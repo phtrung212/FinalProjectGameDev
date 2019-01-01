@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4455225947715454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 95828314957387242}
   - component: {fileID: 61412668346554624}
   - component: {fileID: 114939357276149080}
+  - component: {fileID: 58404701022148388}
   m_Layer: 12
   m_Name: Char
-  m_TagString: Player
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +93,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
+--- !u!58 &58404701022148388
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628669886234316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 9.599999
 --- !u!61 &61412668346554624
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -147,7 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad400197723d03429bf2e7a9464ed91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  nextMap: 3
+  level: 1
 --- !u!212 &212335042397598078
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour {
 
+    public int nextMap;
     public int level;
     // Use this for initialization
     void Start() {
@@ -22,8 +23,17 @@ public class NPC : MonoBehaviour {
         //if (collision.gameObject.tag == "Player") {
         //Debug.Log("1111111");
         //{
-        Debug.Log("2222222222");
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        Debug.Log(collision.name);
+        if (collision.name == "Player")
+        {
+            Debug.Log("cccc");
+            if (collision.GetComponent<MainChar>().Experence.getLevel() >= level)
+                SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+            else
+            {
+                collision.GetComponent<MainChar>().Note2.text = "Địa đạo phía cấp nguy hiểm. Đại hiệp tiên hoạch đắc " + level.ToString() + " cấp.";
+            }
+        }
         //}
 
         //}
