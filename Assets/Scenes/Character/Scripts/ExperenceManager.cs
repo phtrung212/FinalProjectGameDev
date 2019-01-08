@@ -66,15 +66,12 @@ public class ExperenceManager
 
     public static int getHealthMax(int lv)
     {
-        if(lv == 0)
-            return arrayHealth[0];
-        return arrayHealth[lv-1];
+
+        return arrayHealth[lv];
     }
 
     public static int getManaMax(int lv)
     {
-        if (lv == 0)
-            return arrayMana[0];
-        return arrayMana[lv -1];
+        return arrayMana[lv];
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour {
+    public float PhamViToiThieu;
     public float PhamViMaxCurrence;
     public float cre;
     public float high = 2.5f;
@@ -58,7 +59,7 @@ public class AutoAttack : MonoBehaviour {
         }
         else
             flag = false;
-
+        Debug.Log(flag);
         healthBar.transform.position = new Vector3(transform.position.x + weigh, transform.position.y + high);
         if (HP.getHP() <= 0)
         {
@@ -95,12 +96,12 @@ public class AutoAttack : MonoBehaviour {
             else
             {
                 temp = temp1;
-                if (player.transform.position.x - transform.position.x < -3)
+                if (player.transform.position.x - transform.position.x < -PhamViToiThieu)
                 {
                     rigidBody.velocity = new Vector2(-Mathf.Abs(speed), rigidBody.velocity.y);
                     transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
                 }
-                else if (player.transform.position.x - transform.position.x > 3)
+                else if (player.transform.position.x - transform.position.x > PhamViToiThieu)
                 {
                     rigidBody.velocity = new Vector2(Mathf.Abs(speed), rigidBody.velocity.y);
                     transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
