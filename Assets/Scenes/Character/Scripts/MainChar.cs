@@ -14,6 +14,18 @@ public class MainChar : MonoBehaviour {
     public Text Note;
     public Text Note2;
     public LayerMask NPCLayer;
+    public GameObject Skill2;
+    public int skill2CD;
+    public int skill1CD;
+    public float skill2PhamVi;
+    public GameObject Skill3;
+    public int skill3CD;
+    public float skill3PhamVi;
+    public Transform Skill3CheckPoint;
+    public GameObject Skill4;
+    public int skill4CD;
+    public float skill4PhamVi;
+    public Transform Skill4CheckPoint;
     public string name;
     string filename = "dataplayer.gd";
     public int level;
@@ -53,12 +65,17 @@ public class MainChar : MonoBehaviour {
     public GameObject HPBar;
     public GameObject manaBar;
     public GameObject expBar;
+    int skill2Attack = 0;
+    int skill1Attack = 0;
+    int skill3Attack = 0;
+    int skill4Attack = 0;
     // Use this for initialization
     void Start () {
         this.tag = "Player";
         speedCurrence = speed;
         database dataBase = readData();
         level = dataBase.lv;
+        //Debug.Log(ExperenceManager.getHealthMax(level));
         name = dataBase.name;
         experenceCurence = dataBase.experence;
         lv.text = (level+1).ToString();
@@ -83,6 +100,33 @@ public class MainChar : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (skill2Attack > 0)
+            skill2Attack--;
+        if (skill2Attack == 50)
+        {
+            Skill2.GetComponent<Animator>().SetBool("skill2", false);
+            playerAnimation.SetBool("skill2", false);
+        }
+        if (skill1Attack > 0)
+            skill1Attack--;
+        if (skill1Attack == 0)
+        {
+            playerAnimation.SetBool("attack1", false);
+        }
+        if (skill3Attack > 0)
+            skill3Attack--;
+        if (skill3Attack == 0)
+        {
+            Skill3.GetComponent<Animator>().SetBool("skill3", false);
+            playerAnimation.SetBool("skill3", false);
+        }
+        if (skill4Attack > 0)
+            skill4Attack--;
+        if (skill4Attack == 0)
+        {
+            Skill4.GetComponent<Animator>().SetBool("skill4", false);
+            playerAnimation.SetBool("skill4", false);
+        }
         if (isAttacking == true)
         {
             Note.text = "Tiến nhập chiến đấu trung.";
@@ -147,8 +191,58 @@ public class MainChar : MonoBehaviour {
 
 
         playerAnimation.SetBool("onGround", isTouchingGround);
-        if (Input.GetKeyDown(KeyCode.Alpha1) && attack1 == -1)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && skill4Attack == 0)
         {
+            skill4Attack = skill4CD;
+            Mana.Damage(5);
+            playerAnimation.SetBool("skill4", true);
+            Skill4.GetComponent<Animator>().SetBool("skill4", true);
+            Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(Skill4CheckPoint.transform.position, skill4PhamVi, QuaiLayer);
+            if (enemiesToDamege.Length > 0)
+            {
+                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                int damgBlood = (int)damg;
+                if (damgBlood > 0)
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && skill3Attack == 0)
+        {
+            skill3Attack = skill3CD;
+            Mana.Damage(5);
+            playerAnimation.SetBool("skill3", true);
+            Skill3.GetComponent<Animator>().SetBool("skill3", true);
+            Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(Skill3CheckPoint.transform.position, skill3PhamVi, QuaiLayer);
+            if (enemiesToDamege.Length > 0)
+            {
+                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                int damgBlood = (int)damg;
+                if (damgBlood > 0)
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && skill2Attack == 0)
+        {
+            skill2Attack = skill2CD;
+            Mana.Damage(5);
+            playerAnimation.SetBool("skill2", true);
+            Skill2.GetComponent<Animator>().SetBool("skill2", true);
+            Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(transform.position, skill2PhamVi, QuaiLayer);
+            for (int i = 0; i < enemiesToDamege.Length; i++)
+            {
+                enemiesToDamege[i].GetComponent<AutoAttack>().HP.Damage(dame);
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                int damgBlood = (int)damg;
+                if (damgBlood > 0)
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1) && skill1Attack == 0)
+        {
+            skill1Attack = skill1CD;
             Mana.Damage(2);
             playerAnimation.SetBool("attack1", true);
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, QuaiLayer);
@@ -159,21 +253,6 @@ public class MainChar : MonoBehaviour {
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
                     enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
-            }
-
-            attack1++;
-        }
-        else
-        {
-            if (attack1 < 100 && attack1 >= 0)
-            {
-                playerAnimation.SetBool("attack1", true);
-                attack1++;
-            }
-            else
-            {
-                attack1 = -1;
-                playerAnimation.SetBool("attack1", false);
             }
         }
 

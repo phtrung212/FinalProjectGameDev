@@ -2309,9 +2309,24 @@ Prefab:
       objectReference: {fileID: 1700328115}
     - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
         type: 2}
+      propertyPath: Note
+      value: 
+      objectReference: {fileID: 1700328120}
+    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
+        type: 2}
+      propertyPath: Note2
+      value: 
+      objectReference: {fileID: 1700328119}
+    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
+        type: 2}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 2143087356}
+    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
+        type: 2}
+      propertyPath: HPBar
+      value: 
+      objectReference: {fileID: 575883931}
     - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
         type: 2}
       propertyPath: manaBar
@@ -2322,21 +2337,6 @@ Prefab:
       propertyPath: expBar
       value: 
       objectReference: {fileID: 1207613234}
-    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
-        type: 2}
-      propertyPath: HPBar
-      value: 
-      objectReference: {fileID: 575883931}
-    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
-        type: 2}
-      propertyPath: Note
-      value: 
-      objectReference: {fileID: 1700328120}
-    - target: {fileID: 114444319528102388, guid: ae157c42f74bf2543b3b4aa0760cd79b,
-        type: 2}
-      propertyPath: Note2
-      value: 
-      objectReference: {fileID: 1700328119}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae157c42f74bf2543b3b4aa0760cd79b, type: 2}
   m_IsPrefabParent: 0

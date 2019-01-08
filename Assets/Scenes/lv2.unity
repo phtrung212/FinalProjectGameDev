@@ -472,6 +472,11 @@ Prefab:
       propertyPath: PhamViMax
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: PhamViMaxCurrence
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabParent: 0

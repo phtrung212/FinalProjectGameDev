@@ -5,9 +5,9 @@ public class ExperenceManager
 {
     QuaiHPManager mana;
     QuaiHPManager health;
-    int[] arrayHealth;
-    int[] arrayLv;
-    int[] arrayMana;
+    static int[] arrayHealth;
+    static int[] arrayLv;
+    static int[] arrayMana;
     private int lvCurent;
     private int ExperenceCurrent;
 
@@ -62,5 +62,19 @@ public class ExperenceManager
     public int getLevel()
     {
         return lvCurent + 1;
+    }
+
+    public static int getHealthMax(int lv)
+    {
+        if(lv == 0)
+            return arrayHealth[0];
+        return arrayHealth[lv-1];
+    }
+
+    public static int getManaMax(int lv)
+    {
+        if (lv == 0)
+            return arrayMana[0];
+        return arrayMana[lv -1];
     }
 }
