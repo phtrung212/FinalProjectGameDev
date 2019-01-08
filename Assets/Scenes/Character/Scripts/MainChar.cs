@@ -6,9 +6,21 @@ using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Threading;
+using System;
+
 
 public class MainChar : MonoBehaviour {
+    public GameObject iconSkill1;
+    public GameObject iconSkill2;
+    public GameObject iconSkill3;
+    public GameObject iconSkill4;
+    public GameObject iconSkill5;
     public Text lv;
+    public Text Textskill1;
+    public Text Textskill2;
+    public Text Textskill3;
+    public Text Textskill4;
+    public Text Textskill5;
     public Text HPText;
     public Text ManaText;
     public Text ExperenceText;
@@ -79,10 +91,12 @@ public class MainChar : MonoBehaviour {
     bool skill1Attack = true;
     bool skill1AttackTime = false;
     bool skill3Attack = true;
+    bool skill3EndSkill = true;
     bool skill3AttackTime = false;
     bool skill4Attack = true;
     bool skill4AttackTime = false;
     bool skill5Attack = true;
+    bool skill5EndSkill = true;
     bool skill5AttackTime = false;
     bool attacking = false;
     private Thread oThread1;
@@ -90,6 +104,22 @@ public class MainChar : MonoBehaviour {
     private Thread oThread3;
     private Thread oThread4;
     private Thread oThread5;
+    private Thread skill1Thread1;
+    private Thread skill2Thread2;
+    private Thread skill3Thread3;
+    private Thread skill4Thread4;
+    private Thread skill5Thread5;
+    bool skill1Flag = true;
+    bool skill2Flag = true;
+    bool skill3Flag = true;
+    bool skill4Flag = true;
+    bool skill5Flag = true;
+    int timeSkill1;
+    int timeSkill2;
+    int timeSkill3;
+    int timeSkill4;
+    int timeSkill5;
+
     // Use this for initialization
     void Start () {
         this.tag = "Player";
@@ -120,6 +150,15 @@ public class MainChar : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if(skill2Attack == true)
+        {
+            iconSkill2.GetComponent<Animator>().SetBool("CD", false);
+            Textskill2.text = "";
+        }
+        else
+        {
+            Textskill2.text = ConvertTime(timeSkill2);
+        }
         if(skill2EndSkill == true)
         {
             Skill2.GetComponent<Animator>().SetBool("skill2", false);
@@ -128,18 +167,59 @@ public class MainChar : MonoBehaviour {
         if (skill1Attack == true)
         {
             playerAnimation.SetBool("attack1", false);
+            iconSkill1.GetComponent<Animator>().SetBool("CD", false);
+            Textskill1.text = "";
+        }
+        else
+        {
+            Textskill1.text = ConvertTime(timeSkill1);
         }
         if (skill3Attack == true)
+        {
+            iconSkill3.GetComponent<Animator>().SetBool("CD", false);
+            Textskill3.text = "";
+        }
+        else
+        {
+            Textskill3.text = ConvertTime(timeSkill3);
+        }
+        if (skill3EndSkill == true)
         {
             Skill3.GetComponent<Animator>().SetBool("skill3", false);
             playerAnimation.SetBool("skill3", false);
         }
+        /*if (skill3Attack == true)
+        {
+            Skill3.GetComponent<Animator>().SetBool("skill3", false);
+            playerAnimation.SetBool("skill3", false);
+            iconSkill3.GetComponent<Animator>().SetBool("CD", false);
+            Textskill3.text = "";
+        }
+        else
+        {
+            Textskill3.text = ConvertTime(timeSkill3);
+        }*/
         if (skill4Attack == true)
         {
             Skill4.GetComponent<Animator>().SetBool("skill4", false);
             playerAnimation.SetBool("skill4", false);
+            iconSkill4.GetComponent<Animator>().SetBool("CD", false);
+            Textskill4.text = "";
+        }
+        else
+        {
+            Textskill4.text = ConvertTime(timeSkill4);
         }
         if (skill5Attack == true)
+        {
+            iconSkill5.GetComponent<Animator>().SetBool("CD", false);
+            Textskill5.text = "";
+        }
+        else
+        {
+            Textskill5.text = ConvertTime(timeSkill5);
+        }
+        if (skill5EndSkill == true)
         {
             Skill5.GetComponent<Animator>().SetBool("skill5", false);
             playerAnimation.SetBool("skill5", false);
@@ -210,18 +290,28 @@ public class MainChar : MonoBehaviour {
         playerAnimation.SetBool("onGround", isTouchingGround);
         if (Input.GetKeyDown(KeyCode.Alpha5) && Mana.getHP() >= 5 && skill5Attack == true && attacking == false)
         {
+            skill5Flag = false;
+            timeSkill5 = 5;
+            oThread5 = new Thread(new ThreadStart(countdownSkill5));
+            oThread5.Start();
+            iconSkill5.GetComponent<Animator>().SetBool("CD", true);
             attacking = true;
             skill5Attack = false;
+            skill5EndSkill = false;
             skill5AttackTime = true;
             Mana.Damage(5);
             playerAnimation.SetBool("skill5", true);
             Skill5.GetComponent<Animator>().SetBool("skill5", true);
             oThread5 = new Thread(new ThreadStart(Skill5Func));
             oThread5.Start();
-
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) && Mana.getHP() >= 5 && skill4Attack == true && attacking == false)
         {
+            skill4Flag = false;
+            timeSkill4 = 1;
+            oThread4 = new Thread(new ThreadStart(countdownSkill4));
+            oThread4.Start();
+            iconSkill4.GetComponent<Animator>().SetBool("CD", true);
             attacking = true;
             skill4Attack = false;
             skill4AttackTime = true;
@@ -234,6 +324,25 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && Mana.getHP() >= 5 && skill3Attack == true && attacking == false)
         {
+            skill3Flag = false;
+            timeSkill3 = 180;
+            oThread3 = new Thread(new ThreadStart(countdownSkill3));
+            oThread3.Start();
+            iconSkill3.GetComponent<Animator>().SetBool("CD", true);
+            attacking = true;
+            skill3Attack = false;
+            skill3EndSkill = false;
+            skill2AttackTime = true;
+            Mana.Damage(5);
+            playerAnimation.SetBool("skill3", true);
+            Skill3.GetComponent<Animator>().SetBool("skill3", true);
+            oThread3 = new Thread(new ThreadStart(Skill3Func));
+            oThread3.Start();
+            /*skill3Flag = false;
+            timeSkill3 = 180;
+            oThread3 = new Thread(new ThreadStart(countdownSkill3));
+            oThread3.Start();
+            iconSkill3.GetComponent<Animator>().SetBool("CD", true);
             attacking = true;
             skill3Attack = false;
             skill3AttackTime = true;
@@ -241,11 +350,16 @@ public class MainChar : MonoBehaviour {
             playerAnimation.SetBool("skill3", true);
             Skill3.GetComponent<Animator>().SetBool("skill3", true);
             oThread3 = new Thread(new ThreadStart(Skill3Func));
-            oThread3.Start();
-            
+            oThread3.Start();*/
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 20 && skill2Attack == true && attacking == false)
         {
+            skill2Flag = false;
+            timeSkill2 = 300;
+            oThread2 = new Thread(new ThreadStart(countdownSkill2));
+            oThread2.Start();
+            iconSkill2.GetComponent<Animator>().SetBool("CD", true);
             attacking = true;
             skill2Attack = false;
             skill2EndSkill = false;
@@ -258,6 +372,11 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) && skill1Attack == true && attacking == false)
         {
+            skill1Flag = false;
+            timeSkill1 = 2;
+            oThread1 = new Thread(new ThreadStart(countdownSkill1));
+            oThread1.Start();
+            iconSkill1.GetComponent<Animator>().SetBool("CD", true);
             attacking = true;
             skill1Attack = false;
             skill1AttackTime = true;
@@ -405,34 +524,68 @@ public class MainChar : MonoBehaviour {
 
     void Skill2Func()
     {
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 6; i++)
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             skill2AttackTime = true;
         }
         Thread.Sleep(1000);
         skill2EndSkill = true;
         skill2AttackTime = false;
         attacking = false;
-        Thread.Sleep(10000);
+        Thread.Sleep(296000);
         skill2Attack = true;
+        
     }
 
     void Skill3Func()
     {
-        Thread.Sleep(800);
+        for (int i = 0; i < 1; i++)
+        {
+            Thread.Sleep(500);
+            skill3AttackTime = true;
+        }
+        Thread.Sleep(500);
+        skill3EndSkill = true;
+        skill3AttackTime = false;
+        attacking = false;
+        Thread.Sleep(179000);
+        skill3Attack = true;
+
+    }
+    /*void Skill3Func()
+    {
+        Thread.Sleep(180000);
         skill3Attack = true;
         skill3AttackTime = false;
         attacking = false;
-    }
+        
+    }*/
 
     void Skill5Func()
     {
-        Thread.Sleep(700);
+        for (int i = 0; i < 3; i++)
+        {
+            Thread.Sleep(500);
+            skill5AttackTime = true;
+        }
+        Thread.Sleep(500);
+        skill5EndSkill = true;
+        skill5AttackTime = false;
+        attacking = false;
+        Thread.Sleep(3000);
+        skill5Attack = true;
+
+    }
+
+    /*void Skill5Func()
+    {
+        Thread.Sleep(5000);
         skill5Attack = true;
         skill5AttackTime = false;
         attacking = false;
-    }
+        
+    }*/
 
     void Skill4Func()
     {
@@ -440,11 +593,12 @@ public class MainChar : MonoBehaviour {
         skill4Attack = true;
         skill4AttackTime = false;
         attacking = false;
+        
     }
 
     void Skill1Func()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             Thread.Sleep(500);
             skill1AttackTime = true;
@@ -453,5 +607,65 @@ public class MainChar : MonoBehaviour {
         skill1Attack = true;
         skill1AttackTime = false;
         attacking = false;
+        
+    }
+
+    void countdownSkill2()
+    {
+        for(int i = 300; i >= 0; i--)
+        {
+            Thread.Sleep(1000);
+            timeSkill2--;
+        }
+    }
+
+    void countdownSkill5()
+    {
+        for (int i = 5; i >= 0; i--)
+        {
+            Thread.Sleep(1000);
+            timeSkill5--;
+        }
+    }
+
+    void countdownSkill4()
+    {
+        for (int i = 1; i >= 0; i--)
+        {
+            Thread.Sleep(1000);
+            timeSkill4--;
+        }
+    }
+
+    void countdownSkill1()
+    {
+        for (int i = 2; i >= 0; i--)
+        {
+            Thread.Sleep(1000);
+            timeSkill1--;
+        }
+    }
+
+    void countdownSkill3()
+    {
+        for (int i = 180; i >= 0; i--)
+        {
+            Thread.Sleep(1000);
+            timeSkill3--;
+        }
+    }
+
+    private string ConvertTime(int second)
+    {
+        TimeSpan t = TimeSpan.FromSeconds(second);
+        // Converts the total miliseconds to the human readable time format
+        if (t.Minutes != 0)
+        {
+            return t.Minutes.ToString() + "'";
+        }
+        else
+        {
+            return t.Seconds.ToString() + "\"";
+        }
     }
 }
