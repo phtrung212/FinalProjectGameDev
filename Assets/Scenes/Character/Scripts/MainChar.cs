@@ -119,9 +119,25 @@ public class MainChar : MonoBehaviour {
     int timeSkill3;
     int timeSkill4;
     int timeSkill5;
-
+    public AudioSource soundSkill1;
+    public AudioSource soundSkill2;
+    public AudioSource soundSkill3;
+    public AudioSource soundSkill4;
+    public AudioSource soundSkill5;
+    public AudioSource Chay;
+    public AudioSource Nhay;
+    public AudioSource Chet;
+    bool isRunning;
     // Use this for initialization
     void Start () {
+        soundSkill5.Stop();
+        soundSkill4.Stop();
+        soundSkill3.Stop();
+        soundSkill2.Stop();
+        soundSkill1.Stop();
+        Chay.Stop();
+        Nhay.Stop();
+        Chet.Stop();
         int[] arrayLv = new int[100];
         arrayLv[0] = 100;
         int[] arrayHealth = new int[100];
@@ -182,11 +198,13 @@ public class MainChar : MonoBehaviour {
         }
         if(skill2EndSkill == true)
         {
+            soundSkill2.Stop();
             Skill2.GetComponent<Animator>().SetBool("skill2", false);
             playerAnimation.SetBool("skill2", false);
         }
         if (skill1Attack == true)
         {
+            soundSkill1.Stop();
             playerAnimation.SetBool("attack1", false);
             iconSkill1.GetComponent<Animator>().SetBool("CD", false);
             Textskill1.text = "";
@@ -206,6 +224,7 @@ public class MainChar : MonoBehaviour {
         }
         if (skill3EndSkill == true)
         {
+            soundSkill3.Stop();
             Skill3.GetComponent<Animator>().SetBool("skill3", false);
             playerAnimation.SetBool("skill3", false);
         }
@@ -222,6 +241,7 @@ public class MainChar : MonoBehaviour {
         }*/
         if (skill4Attack == true)
         {
+            soundSkill4.Stop();
             Skill4.GetComponent<Animator>().SetBool("skill4", false);
             playerAnimation.SetBool("skill4", false);
             iconSkill4.GetComponent<Animator>().SetBool("CD", false);
@@ -242,6 +262,7 @@ public class MainChar : MonoBehaviour {
         }
         if (skill5EndSkill == true)
         {
+            soundSkill5.Stop();
             Skill5.GetComponent<Animator>().SetBool("skill5", false);
             playerAnimation.SetBool("skill5", false);
         }
@@ -280,37 +301,59 @@ public class MainChar : MonoBehaviour {
        
         if (HP.getHP() <= 0)
         {
+            Chet.Play();
             HP.returnHP();
             transform.position = new Vector3(0.09f, -3.170004f, transform.position.z);
         }
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer) || Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, QuaiLayer);
         moment = Input.GetAxis("Horizontal");
+        
         if (moment > 0f)
         {
+            if(isRunning == false)
+            {
+                isRunning = true;
+                Chay.Play();
+            }
             playerAnimation.SetFloat("Speed", 1);
             rigidBody.velocity = new Vector2(moment * speedCurrence, rigidBody.velocity.y);
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else if (moment < 0f)
         {
+            if (isRunning == false)
+            {
+                isRunning = true;
+                Chay.Play();
+            }
             playerAnimation.SetFloat("Speed", 1);
             rigidBody.velocity = new Vector2(moment * speedCurrence, rigidBody.velocity.y);
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else
         {
+            if(isRunning == true)
+            {
+                isRunning = false;
+                Chay.Stop();
+            }
             playerAnimation.SetFloat("Speed", 0);
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && isAttacking == false)
         {
+            Nhay.Play();
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
         }
-
+        if (isTouchingGround == false)
+        {
+            Chay.Stop();
+        }
 
         playerAnimation.SetBool("onGround", isTouchingGround);
         if (Input.GetKeyDown(KeyCode.Alpha5) && Mana.getHP() >= 5 && skill5Attack == true && attacking == false)
         {
+            soundSkill5.Play();
             skill5Flag = false;
             timeSkill5 = 5;
             oThread5 = new Thread(new ThreadStart(countdownSkill5));
@@ -328,6 +371,7 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) && Mana.getHP() >= 5 && skill4Attack == true && attacking == false)
         {
+            soundSkill4.Play();
             skill4Flag = false;
             timeSkill4 = 1;
             oThread4 = new Thread(new ThreadStart(countdownSkill4));
@@ -345,6 +389,7 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && Mana.getHP() >= 5 && skill3Attack == true && attacking == false)
         {
+            soundSkill3.Play();
             skill3Flag = false;
             timeSkill3 = 180;
             oThread3 = new Thread(new ThreadStart(countdownSkill3));
@@ -376,6 +421,7 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 20 && skill2Attack == true && attacking == false)
         {
+            soundSkill2.Play();
             skill2Flag = false;
             timeSkill2 = 300;
             oThread2 = new Thread(new ThreadStart(countdownSkill2));
@@ -393,6 +439,7 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) && skill1Attack == true && attacking == false)
         {
+            soundSkill1.Play();
             skill1Flag = false;
             timeSkill1 = 2;
             oThread1 = new Thread(new ThreadStart(countdownSkill1));
