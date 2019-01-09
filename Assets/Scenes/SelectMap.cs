@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play : MonoBehaviour {
-    public GameObject player;
-    public int nextMap;
-    public int levelNeedToJoin;
+public class SelectMap : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
-        
+		
 	}
 	
 	// Update is called once per frame
@@ -17,13 +15,11 @@ public class Play : MonoBehaviour {
 		
 	}
 
-
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(player.GetComponent<OpenMap>().dataBase.lv >= levelNeedToJoin)
-                SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
     }
 }

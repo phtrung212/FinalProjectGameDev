@@ -27,11 +27,18 @@ public class NPC : MonoBehaviour {
         if (collision.name == "Player")
         {
             Debug.Log("cccc");
-            if (collision.GetComponent<MainChar>().Experence.getLevel() >= level)
-                SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+            if (collision.GetComponent<MainChar>().isAttacking == false)
+            {
+                if (collision.GetComponent<MainChar>().Experence.getLevel() >= level)
+                    SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+                else
+                {
+                    collision.GetComponent<MainChar>().Note2.text = "Địa đạo phía cấp nguy hiểm. Đại hiệp tiên hoạch đắc " + level.ToString() + " cấp.";
+                }
+            }
             else
             {
-                collision.GetComponent<MainChar>().Note2.text = "Địa đạo phía cấp nguy hiểm. Đại hiệp tiên hoạch đắc " + level.ToString() + " cấp.";
+                collision.GetComponent<MainChar>().Note2.text = "Đại hiệp. Ngươi tiên cấp hoàn thành đánh bại địch nhân hậu khả dĩ tiến nhập kế tiếp địa đồ ";
             }
         }
         //}

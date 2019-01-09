@@ -10,6 +10,7 @@ using System;
 
 
 public class MainChar : MonoBehaviour {
+    public int currentLevelMap;
     public GameObject iconSkill1;
     public GameObject iconSkill2;
     public GameObject iconSkill3;
@@ -296,7 +297,7 @@ public class MainChar : MonoBehaviour {
         else
         {
             Debug.Log("---");
-            writeData();
+            writeData(currentLevelMap);
         } 
        
         if (HP.getHP() <= 0)
