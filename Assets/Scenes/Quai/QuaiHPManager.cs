@@ -26,6 +26,20 @@ public class QuaiHPManager {
         HPCurrent = HP;
     }
 
+    public void setHP(float percent)
+    {
+        Console.WriteLine(HPCurrent);
+        if (getHealthPercent() + (float)percent >= 1f)
+        {
+            HPCurrent = HP;
+        }
+        else
+        {
+            HPCurrent = HPCurrent + (int)(HP * percent);
+        }
+        Console.WriteLine(HPCurrent);
+    }
+
     public float getHealthPercent()
     {
         return (float)HPCurrent / HP;

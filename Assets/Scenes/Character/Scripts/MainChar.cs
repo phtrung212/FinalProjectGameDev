@@ -299,7 +299,7 @@ public class MainChar : MonoBehaviour {
             skill5Attack = false;
             skill5EndSkill = false;
             skill5AttackTime = true;
-            Mana.Damage(5);
+            Mana.Damage(2);
             playerAnimation.SetBool("skill5", true);
             Skill5.GetComponent<Animator>().SetBool("skill5", true);
             oThread5 = new Thread(new ThreadStart(Skill5Func));
@@ -315,7 +315,7 @@ public class MainChar : MonoBehaviour {
             attacking = true;
             skill4Attack = false;
             skill4AttackTime = true;
-            Mana.Damage(5);
+            Mana.Damage(1);
             playerAnimation.SetBool("skill4", true);
             Skill4.GetComponent<Animator>().SetBool("skill4", true);
             oThread4 = new Thread(new ThreadStart(Skill4Func));
@@ -333,7 +333,7 @@ public class MainChar : MonoBehaviour {
             skill3Attack = false;
             skill3EndSkill = false;
             skill2AttackTime = true;
-            Mana.Damage(5);
+            Mana.Damage(20);
             playerAnimation.SetBool("skill3", true);
             Skill3.GetComponent<Animator>().SetBool("skill3", true);
             oThread3 = new Thread(new ThreadStart(Skill3Func));
@@ -364,7 +364,7 @@ public class MainChar : MonoBehaviour {
             skill2Attack = false;
             skill2EndSkill = false;
             skill2AttackTime = true;
-            Mana.Damage(5);
+            Mana.Damage(30);
             playerAnimation.SetBool("skill2", true);
             Skill2.GetComponent<Animator>().SetBool("skill2", true);
             oThread2 = new Thread(new ThreadStart(Skill2Func));
@@ -380,7 +380,6 @@ public class MainChar : MonoBehaviour {
             attacking = true;
             skill1Attack = false;
             skill1AttackTime = true;
-            Mana.Damage(2);
             playerAnimation.SetBool("attack1", true);
             oThread1 = new Thread(new ThreadStart(Skill1Func));
             oThread1.Start();
@@ -395,7 +394,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*4);
             }
         }
         if(skill4AttackTime == true)
@@ -408,7 +407,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*2);
             }
         }
         if (skill5AttackTime == true)
@@ -421,7 +420,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)(damgBlood*0.5));
             }
         }
         if (skill2AttackTime == true)
@@ -434,7 +433,9 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+                {
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)((int)(damgBlood*1.5)));
+                }
             }
         }
         if (skill1AttackTime == true)
@@ -545,7 +546,7 @@ public class MainChar : MonoBehaviour {
             Thread.Sleep(500);
             skill3AttackTime = true;
         }
-        Thread.Sleep(500);
+        Thread.Sleep(300);
         skill3EndSkill = true;
         skill3AttackTime = false;
         attacking = false;

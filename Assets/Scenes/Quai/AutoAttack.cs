@@ -63,7 +63,22 @@ public class AutoAttack : MonoBehaviour {
         healthBar.transform.position = new Vector3(transform.position.x + weigh, transform.position.y + high);
         if (HP.getHP() <= 0)
         {
-            player.GetComponent<MainChar>().Experence.increase(experence);
+            if(player.GetComponent<MainChar>().Experence.getLevel() <= Level)
+            {
+                experence = experence - (int)(experence * (player.GetComponent<MainChar>().Experence.getLevel() - Level) * 0.1);
+            }
+            else if(Level - player.GetComponent<MainChar>().Experence.getLevel() >= 3)
+            {
+                experence = experence - (int)(experence * (Level - player.GetComponent<MainChar>().Experence.getLevel()) * 0.1);
+            }
+            else
+            {
+                experence = 0;
+            }
+            if (experence > 0)
+            {
+                player.GetComponent<MainChar>().Experence.increase(experence);
+            }
             player.GetComponent<MainChar>().cancalAttacking(name);
             enemy.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);
@@ -82,7 +97,8 @@ public class AutoAttack : MonoBehaviour {
                     int damgBlood = (int)damg;
                     if (damgBlood > 0)
                     {
-                        player.GetComponent<MainChar>().setSpeedCurrence(cre);
+                        if(cre* player.GetComponent<MainChar>().speed < player.GetComponent<MainChar>().speedCurrence)
+                            player.GetComponent<MainChar>().setSpeedCurrence(cre);
                         player.GetComponent<MainChar>().HP.Damage(damgBlood);
                     }
                     temp = 0;

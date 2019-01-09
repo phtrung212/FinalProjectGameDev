@@ -52,7 +52,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4732479099668426}
-  m_Layer: 10
+  - component: {fileID: 58579127240832450}
+  m_Layer: 11
   m_Name: skill5PhamVi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896958577846204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: 1.5, z: -0.011506854}
+  m_LocalPosition: {x: -39.96, y: 0.32, z: -0.011506854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255080808140430}
@@ -360,7 +361,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416535310286202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.91, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4255080808140430}
@@ -470,6 +471,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 11
+--- !u!58 &58579127240832450
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416535310286202}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10.426823
 --- !u!58 &58778284387857396
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -657,7 +673,7 @@ MonoBehaviour:
   skill4PhamVi: 2.2
   Skill4CheckPoint: {fileID: 4347945325491870}
   Skill5: {fileID: 1995143525064628}
-  skill5PhamVi: 0
+  skill5PhamVi: 3.85
   Skill5CheckPoint: {fileID: 4732479099668426}
   name: 
   level: 3

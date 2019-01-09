@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scenes\Character\Scripts\MainChar.cs" />
     <Compile Include="Assets\Scenes\Character\Scripts\NPC.cs" />
     <Compile Include="Assets\Scenes\database.cs" />
+    <Compile Include="Assets\Scenes\item\HP.cs" />
+    <Compile Include="Assets\Scenes\item\Mana.cs" />
     <Compile Include="Assets\Scenes\Play.cs" />
     <Compile Include="Assets\Scenes\Quai\AutoAttack.cs" />
     <Compile Include="Assets\Scenes\Quai\HealthBar.cs" />
