@@ -11,10 +11,9 @@ public class ExperenceManager
     private int lvCurent;
     private int ExperenceCurrent;
 
+ 
     public ExperenceManager(int level, int ExperenceCurrent, ref QuaiHPManager health, ref QuaiHPManager mana)
     {
-        this.mana = mana;
-        this.health = health;
         arrayLv = new int[100];
         arrayLv[0] = 100;
         arrayHealth = new int[100];
@@ -23,10 +22,12 @@ public class ExperenceManager
         arrayMana[0] = 100;
         for (int i = 1; i < arrayLv.Length; i++)
         {
-            arrayLv[i] = arrayLv[i-1]*2;
+            arrayLv[i] = arrayLv[i - 1] * 2;
             arrayHealth[i] = (int)(arrayHealth[i - 1] * 1.1);
             arrayMana[i] = (int)(arrayMana[i - 1] * 1.1);
         }
+        this.mana = mana;
+        this.health = health;
         this.ExperenceCurrent = ExperenceCurrent;
         lvCurent = level;
     }
@@ -66,7 +67,6 @@ public class ExperenceManager
 
     public static int getHealthMax(int lv)
     {
-
         return arrayHealth[lv];
     }
 

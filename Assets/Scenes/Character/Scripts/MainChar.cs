@@ -122,13 +122,33 @@ public class MainChar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        int[] arrayLv = new int[100];
+        arrayLv[0] = 100;
+        int[] arrayHealth = new int[100];
+        arrayHealth[0] = 500;
+        int[] arrayMana = new int[100];
+        arrayMana[0] = 100;
+        for (int i = 1; i < arrayLv.Length; i++)
+        {
+            arrayLv[i] = arrayLv[i - 1] * 2;
+            arrayHealth[i] = (int)(arrayHealth[i - 1] * 1.1);
+            arrayMana[i] = (int)(arrayMana[i - 1] * 1.1);
+        }
         this.tag = "Player";
         speedCurrence = speed;
         database dataBase = readData();
         level = dataBase.lv;
-        Experence = new ExperenceManager(level, experenceCurence, ref HP, ref Mana);
-        name = dataBase.name;
         experenceCurence = dataBase.experence;
+        HP = new QuaiHPManager(arrayHealth[level]);
+        Mana = new QuaiHPManager(arrayMana[level]);
+        Debug.Log(dataBase.lv);
+        Debug.Log(dataBase.experence);
+        Debug.Log(HP);
+        Debug.Log(Mana);
+        Experence = new ExperenceManager(level, experenceCurence, ref HP, ref Mana);
+        
+        name = dataBase.name;
+        
         lv.text = (level+1).ToString();
         Debug.Log(level);
         Debug.Log(experenceCurence);
@@ -138,12 +158,13 @@ public class MainChar : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         attack1 = -1;
-        HP = new QuaiHPManager(ExperenceManager.getHealthMax(level));
+        
         healthBar = HPBar.GetComponent<HealthBar>();
         healthBar.setup(HP);
-        Mana = new QuaiHPManager(ExperenceManager.getManaMax(level));
+       
         ManaBar = manaBar.GetComponent<HealthBar>();
         ManaBar.setup(Mana);
+        
         LVBar = expBar.GetComponent<LevelBar>();
         LVBar.setup(Experence);
     }
@@ -504,7 +525,7 @@ public class MainChar : MonoBehaviour {
     database readData()
     {
         Debug.Log(Application.persistentDataPath + "/" + filename);
-        database dataBase = new database(name, 1, 0, 1);
+        database dataBase = new database(name, 0, 0, 1);
         if(File.Exists(Application.persistentDataPath + "/" + filename))
         {
             BinaryFormatter bf = new BinaryFormatter();
@@ -514,11 +535,14 @@ public class MainChar : MonoBehaviour {
         }
         else
         {
-            dataBase = new database(name, 0, 0, 1);
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Create(Application.persistentDataPath + "/" + filename);
             bf.Serialize(file, dataBase);
             file.Close();
+            /*BinaryFormatter bff = new BinaryFormatter();
+            FileStream filef = File.Create(Application.persistentDataPath + "/" + filename);
+            bff.Serialize(filef, dataBase);
+            filef.Close();*/
         }
         return dataBase;
     }
