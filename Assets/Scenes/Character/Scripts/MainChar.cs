@@ -146,7 +146,7 @@ public class MainChar : MonoBehaviour {
         Debug.Log(HP);
         Debug.Log(Mana);
         Experence = new ExperenceManager(level, experenceCurence, ref HP, ref Mana);
-        
+        Debug.Log(Experence.getLevel());
         name = dataBase.name;
         
         lv.text = (level+1).ToString();

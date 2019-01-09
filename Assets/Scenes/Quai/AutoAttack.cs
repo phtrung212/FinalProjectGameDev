@@ -63,11 +63,14 @@ public class AutoAttack : MonoBehaviour {
         healthBar.transform.position = new Vector3(transform.position.x + weigh, transform.position.y + high);
         if (HP.getHP() <= 0)
         {
-            if(player.GetComponent<MainChar>().Experence.getLevel() <= Level)
+            Debug.Log("--------------");
+            Debug.Log(Level);
+            Debug.Log(player.GetComponent<MainChar>().Experence.getLevel());
+            if (player.GetComponent<MainChar>().Experence.getLevel() <= Level)
             {
                 experence = experence - (int)(experence * (player.GetComponent<MainChar>().Experence.getLevel() - Level) * 0.1);
             }
-            else if(Level - player.GetComponent<MainChar>().Experence.getLevel() >= 3)
+            else if ((player.GetComponent<MainChar>().Experence.getLevel() - Level > 0) && (player.GetComponent<MainChar>().Experence.getLevel() - Level <= 3))
             {
                 experence = experence - (int)(experence * (Level - player.GetComponent<MainChar>().Experence.getLevel()) * 0.1);
             }
@@ -79,6 +82,7 @@ public class AutoAttack : MonoBehaviour {
             {
                 player.GetComponent<MainChar>().Experence.increase(experence);
             }
+            Debug.Log(experence);
             player.GetComponent<MainChar>().cancalAttacking(name);
             enemy.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
             Destroy(gameObject);

@@ -34,6 +34,8 @@ public class ExperenceManager
 
     public void increase(int experence)
     {
+        Debug.WriteLine("-----------");
+        Debug.WriteLine(experence);
         ExperenceCurrent = ExperenceCurrent + experence;
         while(ExperenceCurrent >= arrayLv[lvCurent])
         {
