@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732099632351322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.05, y: -0.6, z: 0}
+  m_LocalPosition: {x: 2.57, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4322442904207640}
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1318598251182526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.1, y: -1.09, z: -0.1}
-  m_LocalScale: {x: 0.73616236, y: 0.73616236, z: 0.73616236}
+  m_LocalPosition: {x: 3.357952, y: 0.38116628, z: -0.1}
+  m_LocalScale: {x: -0.7361624, y: 0.73616236, z: 0.73616236}
   m_Children:
   - {fileID: 4258128127087208}
   m_Father: {fileID: 0}
@@ -163,6 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefcd363345d4574189721b9a3b54990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PhamViToiThieu: 3
+  PhamViMaxCurrence: 0
+  cre: 0.4
   high: 4.3
   weigh: -1.1
   Level: 1
@@ -173,12 +176,12 @@ MonoBehaviour:
     m_Bits: 1024
   PhamViMin: 0
   PhamViMax: 10
-  PlayerCheckRadius: 1.8
+  PlayerCheckRadius: 4
   PlayerCheckPoint: {fileID: 4258128127087208}
   enemy: {fileID: 1936138796132904, guid: 6323e43a192fc784e9c9235467589b5c, type: 2}
   bloodLoss: 20
   player: {fileID: 0}
-  speed: 1
+  speed: 5
   jumpSpeed: 10
   count: 60
   temp: 30
