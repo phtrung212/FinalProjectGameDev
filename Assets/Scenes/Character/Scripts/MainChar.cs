@@ -132,6 +132,7 @@ public class MainChar : MonoBehaviour {
     bool isRunning;
     private Thread noteThread;
     bool canPrintNote = false;
+    bool autoRun = false;
     // Use this for initialization
     void Start () {
         
@@ -195,6 +196,34 @@ public class MainChar : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (autoRun)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            }
+            else if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            }
+            if (isRunning == false)
+            {
+                isRunning = true;
+                Chay.Play();
+            }
+            playerAnimation.SetFloat("Speed", 1);
+            
+            if (transform.localScale.x >= 0)
+            {
+                Debug.Log(speedCurrence);
+                rigidBody.velocity = new Vector2(speedCurrence, rigidBody.velocity.y);
+            }
+            else
+            {
+                Debug.Log(speedCurrence);
+                rigidBody.velocity = new Vector2(-speedCurrence, rigidBody.velocity.y);
+            }
+        }
         if(canPrintNote == true)
         {
             printNote();
@@ -320,7 +349,7 @@ public class MainChar : MonoBehaviour {
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer) || Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, QuaiLayer);
         moment = Input.GetAxis("Horizontal");
         
-        if (moment > 0f)
+        if (moment > 0f && autoRun ==false)
         {
             if(isRunning == false)
             {
@@ -331,7 +360,7 @@ public class MainChar : MonoBehaviour {
             rigidBody.velocity = new Vector2(moment * speedCurrence, rigidBody.velocity.y);
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
-        else if (moment < 0f)
+        else if (moment < 0f && autoRun == false)
         {
             if (isRunning == false)
             {
@@ -339,10 +368,11 @@ public class MainChar : MonoBehaviour {
                 Chay.Play();
             }
             playerAnimation.SetFloat("Speed", 1);
+            Debug.Log(moment);
             rigidBody.velocity = new Vector2(moment * speedCurrence, rigidBody.velocity.y);
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
-        else
+        else if(autoRun == false)
         {
             if(isRunning == true)
             {
@@ -361,7 +391,15 @@ public class MainChar : MonoBehaviour {
         {
             Chay.Stop();
         }
-
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            autoRun = !autoRun;
+            if(autoRun == false)
+            {
+                isRunning = false;
+                Chay.Stop();
+            }
+        }
         playerAnimation.SetBool("onGround", isTouchingGround);
         if (Input.GetKeyDown(KeyCode.Alpha5) && Mana.getHP() >= 5 && skill5Attack == true && attacking == false)
         {
