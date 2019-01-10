@@ -842,14 +842,12 @@ public class MainChar : MonoBehaviour {
     {
         while (true)
         {
-            Debug.Log("2222222222");
-            Debug.Log(arrayNote.Count);
             if (arrayNote.Count > 0)
             {
+                Thread.Sleep(3000);
                 arrayNote.RemoveAt(0);
                 canPrintNote = true;
             }
-            Thread.Sleep(3000);
         }
     }
 
