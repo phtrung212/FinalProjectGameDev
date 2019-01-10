@@ -33,12 +33,12 @@ public class NPC : MonoBehaviour {
                     SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
                 else
                 {
-                    collision.GetComponent<MainChar>().Note2.text = "Địa đạo phía cấp nguy hiểm. Đại hiệp tiên hoạch đắc " + level.ToString() + " cấp.";
+                    collision.GetComponent<MainChar>().Note2.text = "*** Đường đi phía trước đầy nguy hiểm. Đại hiệp cần đạt " + level.ToString() + " cấp để vượt cảnh ***";
                 }
             }
             else
             {
-                collision.GetComponent<MainChar>().Note2.text = "Đại hiệp. Ngươi tiên cấp hoàn thành đánh bại địch nhân hậu khả dĩ tiến nhập kế tiếp địa đồ ";
+                collision.GetComponent<MainChar>().addNote("*** Đại hiệp đang trong trạng thái chiến đấu không thể vượt cảnh kế tiếp ***");
             }
         }
         //}

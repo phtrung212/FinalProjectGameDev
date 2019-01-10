@@ -10,6 +10,7 @@ using System;
 
 
 public class MainChar : MonoBehaviour {
+    List<string> arrayNote;
     public int currentLevelMap;
     public GameObject iconSkill1;
     public GameObject iconSkill2;
@@ -129,8 +130,14 @@ public class MainChar : MonoBehaviour {
     public AudioSource Nhay;
     public AudioSource Chet;
     bool isRunning;
+    private Thread noteThread;
+    bool canPrintNote = false;
     // Use this for initialization
     void Start () {
+        
+        arrayNote = new List<string>();
+        noteThread = new Thread(new ThreadStart(countTimeNote));
+        noteThread.Start();
         soundSkill5.Stop();
         soundSkill4.Stop();
         soundSkill3.Stop();
@@ -188,6 +195,10 @@ public class MainChar : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if(canPrintNote == true)
+        {
+            printNote();
+        }
         if(skill2Attack == true)
         {
             iconSkill2.GetComponent<Animator>().SetBool("CD", false);
@@ -269,11 +280,11 @@ public class MainChar : MonoBehaviour {
         }
         if (isAttacking == true)
         {
-            Note.text = "Tiến nhập chiến đấu trung.";
+            Note2.text = "*** Đang chiến đấu ***";
         }
         else
         {
-            Note.text = "";
+            Note2.text = "";
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -370,6 +381,22 @@ public class MainChar : MonoBehaviour {
             oThread5 = new Thread(new ThreadStart(Skill5Func));
             oThread5.Start();
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            if (attacking == true)
+            {
+                addNote("*** Đang vận công. Hãy yên lặng chờ một lát ***");
+            }
+            else if (Mana.getHP() < 2)
+            {
+                addNote("*** Nội lực bất túc ***");
+            }
+            else if (skill5Attack == false)
+            {
+                Debug.Log("----------------");
+                addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha4) && Mana.getHP() >= 5 && skill4Attack == true && attacking == false)
         {
             soundSkill4.Play();
@@ -387,6 +414,22 @@ public class MainChar : MonoBehaviour {
             oThread4 = new Thread(new ThreadStart(Skill4Func));
             oThread4.Start();
 
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (attacking == true)
+            {
+                addNote("*** Đang vận công. Hãy yên lặng chờ một lát ***");
+            }
+            else if (Mana.getHP() < 1)
+            {
+                addNote("*** Nội lực bất túc ***");
+            }
+            else if (skill4Attack == false)
+            {
+                Debug.Log("----------------");
+                addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && Mana.getHP() >= 5 && skill3Attack == true && attacking == false)
         {
@@ -420,7 +463,23 @@ public class MainChar : MonoBehaviour {
             oThread3.Start();*/
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 20 && skill2Attack == true && attacking == false)
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (attacking == true)
+            {
+                addNote("*** Đang vận công. Hãy yên lặng chờ một lát ***");
+            }
+            else if (Mana.getHP() < 20)
+            {
+                addNote("*** Nội lực bất túc ***");
+            }
+            else if (skill3Attack == false)
+            {
+                Debug.Log("----------------");
+                addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 30 && skill2Attack == true && attacking == false)
         {
             soundSkill2.Play();
             skill2Flag = false;
@@ -438,6 +497,22 @@ public class MainChar : MonoBehaviour {
             oThread2 = new Thread(new ThreadStart(Skill2Func));
             oThread2.Start();
         }
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (attacking == true)
+            {
+                addNote("*** Đang vận công. Hãy yên lặng chờ một lát ***");
+            }
+            else if (Mana.getHP() < 30)
+            {
+                addNote("*** Nội lực bất túc ***");
+            }
+            else if(skill2Attack == false)
+            {
+                Debug.Log("----------------");
+                addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1) && skill1Attack == true && attacking == false)
         {
             soundSkill1.Play();
@@ -452,6 +527,19 @@ public class MainChar : MonoBehaviour {
             playerAnimation.SetBool("attack1", true);
             oThread1 = new Thread(new ThreadStart(Skill1Func));
             oThread1.Start();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (attacking == true)
+            {
+                addNote("*** Đang vận công. Hãy yên lặng chờ một lát ***");
+            }
+            else if (skill1Attack == false)
+            {
+                Debug.Log("----------------");
+                addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
+            }
+            
         }
         if (skill3AttackTime == true)
         {
@@ -740,5 +828,38 @@ public class MainChar : MonoBehaviour {
         {
             return t.Seconds.ToString() + "\"";
         }
+    }
+
+    public void addNote(string note)
+    {
+        if (arrayNote.Count > 5)
+            arrayNote.RemoveAt(0);
+        arrayNote.Add(note);
+        printNote();
+    }
+
+    void countTimeNote()
+    {
+        while (true)
+        {
+            Debug.Log("2222222222");
+            Debug.Log(arrayNote.Count);
+            if (arrayNote.Count > 0)
+            {
+                arrayNote.RemoveAt(0);
+                canPrintNote = true;
+            }
+            Thread.Sleep(3000);
+        }
+    }
+
+    void printNote()
+    {
+        Note.text = "";
+        for (int i = 0; i < arrayNote.Count; i++)
+        {
+            Note.text = Note.text + "\n" + arrayNote[i];
+        }
+        
     }
 }

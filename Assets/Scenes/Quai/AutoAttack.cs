@@ -91,8 +91,9 @@ public class AutoAttack : MonoBehaviour {
         if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViMaxCurrence && Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) >= PhamViMin)
         {
             PhamViMaxCurrence = 20;
-            if (HP.getHP() > 0)
+            if (HP.getHP() > 0) {
                 player.GetComponent<MainChar>().setAttacking(name);
+            }
             if (flag)
             {
                 if (count == temp)
