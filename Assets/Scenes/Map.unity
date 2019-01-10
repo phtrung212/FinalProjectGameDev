@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 765888504}
   nextMap: 2
-  levelNeedToJoin: 1
+  levelNeedToJoin: 0
 --- !u!212 &1138752740
 SpriteRenderer:
   m_ObjectHideFlags: 0
