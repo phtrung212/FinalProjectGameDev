@@ -6,15 +6,15 @@ public class ExperenceManager
     QuaiHPManager mana;
     QuaiHPManager health;
     static int[] arrayHealth;
-    static int[] arrayLv;
+    static ulong[] arrayLv;
     static int[] arrayMana;
     private int lvCurent;
-    private int ExperenceCurrent;
+    private ulong ExperenceCurrent;
 
  
-    public ExperenceManager(int level, int ExperenceCurrent, ref QuaiHPManager health, ref QuaiHPManager mana)
+    public ExperenceManager(int level, ulong ExperenceCurrent, ref QuaiHPManager health, ref QuaiHPManager mana)
     {
-        arrayLv = new int[100];
+        arrayLv = new ulong[100];
         arrayLv[0] = 100;
         arrayHealth = new int[100];
         arrayHealth[0] = 500;
@@ -36,7 +36,7 @@ public class ExperenceManager
     {
         Debug.WriteLine("-----------");
         Debug.WriteLine(experence);
-        ExperenceCurrent = ExperenceCurrent + experence;
+        ExperenceCurrent = ExperenceCurrent + (ulong)experence;
         while(ExperenceCurrent >= arrayLv[lvCurent])
         {
             health.setHPMax(lvCurent);
@@ -53,11 +53,11 @@ public class ExperenceManager
         return (float)ExperenceCurrent / arrayLv[lvCurent];
     }
 
-    public int getExperenceNextLV()
+    public ulong getExperenceNextLV()
     {
         return arrayLv[lvCurent];
     }
-    public int getExperence()
+    public ulong getExperence()
     {
         return ExperenceCurrent;
     }

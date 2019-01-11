@@ -39,7 +39,8 @@ public class TienNhapDiaDo : MonoBehaviour {
                 bf.Serialize(file, dataBase);
                 file.Close();
             }
-             SceneManager.LoadScene(dataBase.lvMap+1, LoadSceneMode.Single);
+            Debug.Log(dataBase.lvMap);
+            SceneManager.LoadScene(dataBase.lvMap + 1, LoadSceneMode.Single);
         }
     }
 }

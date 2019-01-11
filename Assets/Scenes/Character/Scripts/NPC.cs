@@ -30,7 +30,10 @@ public class NPC : MonoBehaviour {
             if (collision.GetComponent<MainChar>().isAttacking == false)
             {
                 if (collision.GetComponent<MainChar>().Experence.getLevel() >= level)
-                    SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+                {
+                    collision.GetComponent<MainChar>().writeData(nextMap - 1);
+                    SceneManager.LoadScene(nextMap + 1, LoadSceneMode.Single);
+                }
                 else
                 {
                     collision.GetComponent<MainChar>().Note2.text = "*** Đường đi phía trước đầy nguy hiểm. Đại hiệp cần đạt " + level.ToString() + " cấp để vượt cảnh ***";

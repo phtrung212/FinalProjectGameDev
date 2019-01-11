@@ -41,18 +41,18 @@ public class OpenMap : MonoBehaviour {
             bff.Serialize(filef, dataBase);
             filef.Close();*/
         }
-        map1.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map2.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map3.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map4.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map5.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map6.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map7.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map8.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map9.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map10.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map11.GetComponent<Animator>().SetInteger("level", dataBase.lv);
-        map12.GetComponent<Animator>().SetInteger("level", dataBase.lv);
+        map1.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map2.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map3.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map4.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map5.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map6.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map7.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map8.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map9.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map10.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map11.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
+        map12.GetComponent<Animator>().SetInteger("level", dataBase.lv+1);
     }
 	
 	// Update is called once per frame

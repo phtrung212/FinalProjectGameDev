@@ -7,7 +7,6 @@ public class SelectMap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -20,6 +19,7 @@ public class SelectMap : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene(1, LoadSceneMode.Single);
+
         }
     }
 }

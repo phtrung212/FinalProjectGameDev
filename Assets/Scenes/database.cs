@@ -6,10 +6,10 @@ using UnityEngine;
 public class database {
     public string name;
     public int lv;
-    public int experence;
+    public ulong experence;
     public int lvMap;
 
-	public database(string name, int lv, int experence, int lvMap)
+	public database(string name, int lv, ulong experence, int lvMap)
     {
         this.name = name;
         this.lv = lv;
@@ -17,7 +17,7 @@ public class database {
         this.lvMap = lvMap;
     }
 
-    public database(string name, int lv, int experence)
+    public database(string name, int lv, ulong experence)
     {
         this.name = name;
         this.lv = lv;

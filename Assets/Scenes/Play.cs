@@ -22,7 +22,8 @@ public class Play : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(player.GetComponent<OpenMap>().dataBase.lv >= levelNeedToJoin)
+            Debug.Log(player.GetComponent<OpenMap>().dataBase.lv);
+            if(player.GetComponent<OpenMap>().dataBase.lv+1 >= levelNeedToJoin)
                 SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
         }
     }

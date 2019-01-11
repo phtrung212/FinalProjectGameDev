@@ -77,7 +77,7 @@ public class MainChar : MonoBehaviour {
     public Transform pfLVBar;
     Transform LVBarTransform;
     LevelBar LVBar;
-    public int experenceCurence;
+    public ulong experenceCurence;
     public ExperenceManager Experence;
     public float speedCurrence;
     public GameObject HPBar;
@@ -162,6 +162,7 @@ public class MainChar : MonoBehaviour {
         this.tag = "Player";
         speedCurrence = speed;
         database dataBase = readData();
+        //database dataBase = new database("", level, 0);
         level = dataBase.lv;
         experenceCurence = dataBase.experence;
         HP = new QuaiHPManager(arrayHealth[level]);
@@ -317,6 +318,7 @@ public class MainChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            writeData(currentLevelMap);
             SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
         //database dataBase = readData();
@@ -329,7 +331,7 @@ public class MainChar : MonoBehaviour {
         int ManaMaxTemp = (int)Mana.getHPMax();
         ManaText.text = ManaCurrenceTemp.ToString() + "/" + ManaMaxTemp.ToString();
         ExperenceText.text = Experence.getExperence().ToString() + "/" + Experence.getExperenceNextLV().ToString();
-        Collider2D[] NPC = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, NPCLayer);
+        /*Collider2D[] NPC = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, NPCLayer);
         if (NPC.Length > 0)
         {
             writeData(2);
@@ -338,12 +340,13 @@ public class MainChar : MonoBehaviour {
         {
             Debug.Log("---");
             writeData(currentLevelMap);
-        } 
+        } */
        
         if (HP.getHP() <= 0)
         {
             Chet.Play();
             HP.returnHP();
+            Mana.returnHP();
             transform.position = new Vector3(0.09f, -3.170004f, transform.position.z);
         }
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer) || Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, QuaiLayer);
@@ -401,7 +404,7 @@ public class MainChar : MonoBehaviour {
             }
         }
         playerAnimation.SetBool("onGround", isTouchingGround);
-        if (Input.GetKeyDown(KeyCode.Alpha5) && Mana.getHP() >= 5 && skill5Attack == true && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && Mana.getHP() >= 5 && skill5Attack == true && attacking == false)
         {
             soundSkill5.Play();
             skill5Flag = false;
@@ -419,7 +422,7 @@ public class MainChar : MonoBehaviour {
             oThread5 = new Thread(new ThreadStart(Skill5Func));
             oThread5.Start();
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (attacking == true)
             {
@@ -435,7 +438,7 @@ public class MainChar : MonoBehaviour {
                 addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && Mana.getHP() >= 5 && skill4Attack == true && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 5 && skill4Attack == true && attacking == false)
         {
             soundSkill4.Play();
             skill4Flag = false;
@@ -453,7 +456,7 @@ public class MainChar : MonoBehaviour {
             oThread4.Start();
 
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (attacking == true)
             {
@@ -469,7 +472,7 @@ public class MainChar : MonoBehaviour {
                 addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && Mana.getHP() >= 5 && skill3Attack == true && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && Mana.getHP() >= 5 && skill3Attack == true && attacking == false)
         {
             soundSkill3.Play();
             skill3Flag = false;
@@ -501,7 +504,7 @@ public class MainChar : MonoBehaviour {
             oThread3.Start();*/
 
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             if (attacking == true)
             {
@@ -517,7 +520,7 @@ public class MainChar : MonoBehaviour {
                 addNote("*** Đang điều tức thời gian. Hãy yên lặng chờ một lát ***");
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && Mana.getHP() >= 30 && skill2Attack == true && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Alpha5) && Mana.getHP() >= 30 && skill2Attack == true && attacking == false)
         {
             soundSkill2.Play();
             skill2Flag = false;
@@ -535,7 +538,7 @@ public class MainChar : MonoBehaviour {
             oThread2 = new Thread(new ThreadStart(Skill2Func));
             oThread2.Start();
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        else if(Input.GetKeyDown(KeyCode.Alpha5))
         {
             if (attacking == true)
             {
@@ -585,7 +588,6 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(Skill3CheckPoint.transform.position, skill3PhamVi, QuaiLayer);
             if (enemiesToDamege.Length > 0)
             {
-                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
@@ -598,7 +600,6 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(Skill4CheckPoint.transform.position, skill4PhamVi, QuaiLayer);
             if (enemiesToDamege.Length > 0)
             {
-                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
@@ -611,11 +612,10 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(transform.position, skill5PhamVi, QuaiLayer);
             for (int i = 0; i < enemiesToDamege.Length; i++)
             {
-                enemiesToDamege[i].GetComponent<AutoAttack>().HP.Damage(dame);
-                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[i].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)(damgBlood*0.5));
+                    enemiesToDamege[i].GetComponent<AutoAttack>().HP.Damage((int)(damgBlood*0.5));
             }
         }
         if (skill2AttackTime == true)
@@ -624,12 +624,11 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(transform.position, skill2PhamVi, QuaiLayer);
             for (int i = 0; i < enemiesToDamege.Length; i++)
             {
-                enemiesToDamege[i].GetComponent<AutoAttack>().HP.Damage(dame);
-                float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
+                float damg = dame + (Experence.getLevel() - enemiesToDamege[i].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
                 {
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)((int)(damgBlood*1.5)));
+                    enemiesToDamege[i].GetComponent<AutoAttack>().HP.Damage((int)((int)(damgBlood*1.5)));
                 }
             }
         }
@@ -639,11 +638,10 @@ public class MainChar : MonoBehaviour {
             Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(QuaiCheckPoint.position, QuaiCheckRadius, QuaiLayer);
             if (enemiesToDamege.Length > 0)
             {
-                enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(dame);
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)(damgBlood*0.2));
             }
         }
 
@@ -860,20 +858,38 @@ public class MainChar : MonoBehaviour {
         // Converts the total miliseconds to the human readable time format
         if (t.Minutes != 0)
         {
-            return t.Minutes.ToString() + "'";
+            return t.Minutes.ToString() + "m";
         }
         else
         {
-            return t.Seconds.ToString() + "\"";
+            return t.Seconds.ToString();
         }
     }
 
     public void addNote(string note)
     {
         if (arrayNote.Count > 5)
-            arrayNote.RemoveAt(0);
-        arrayNote.Add(note);
-        printNote();
+        {
+            if (note != arrayNote[arrayNote.Count - 1])
+            {
+                arrayNote.RemoveAt(0);
+                arrayNote.Add(note);
+                printNote();
+            }
+        }
+        else if(arrayNote.Count > 0)
+        {
+            if (note != arrayNote[arrayNote.Count - 1])
+            {
+                arrayNote.Add(note);
+                printNote();
+            }
+        }
+        else
+        {
+            arrayNote.Add(note);
+            printNote();
+        }
     }
 
     void countTimeNote()
