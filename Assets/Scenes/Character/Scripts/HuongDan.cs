@@ -588,7 +588,7 @@ public class HuongDan : MonoBehaviour
                         float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<QuaiHuongDan>().Level) * 0.1f * dame;
                         int damgBlood = (int)damg;
                         if (damgBlood > 0)
-                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage(damgBlood * 2);
+                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage(damgBlood * 1);
                     }
                 }
             }
@@ -798,7 +798,7 @@ public class HuongDan : MonoBehaviour
                         float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<QuaiHuongDan>().Level) * 0.1f * dame;
                         int damgBlood = (int)damg;
                         if (damgBlood > 0)
-                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage(damgBlood * 4);
+                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage(damgBlood * 6);
                     }
                 }
             }

@@ -81,6 +81,7 @@ public class AutoAttack : MonoBehaviour {
             if (experence > 0)
             {
                 player.GetComponent<MainChar>().Experence.increase(experence);
+                player.GetComponent<MainChar>().addNote("***Bạn nhận được " + experence.ToString() + " điểm kinh nghiệm***");
             }
             Debug.Log(experence);
             player.GetComponent<MainChar>().cancalAttacking(name);

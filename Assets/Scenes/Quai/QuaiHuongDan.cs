@@ -87,8 +87,8 @@ public class QuaiHuongDan : MonoBehaviour
             }
             if (experence > 0)
             {
-                Debug.Log(experence);
                 player.GetComponent<HuongDan>().Experence.increase(experence);
+                player.GetComponent<HuongDan>().addNote("***Bạn nhận được " + experence.ToString() + " điểm kinh nghiệm***");
             }
             Debug.Log(experence);
             player.GetComponent<HuongDan>().cancalAttacking(name);

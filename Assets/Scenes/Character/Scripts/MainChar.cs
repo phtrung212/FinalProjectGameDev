@@ -591,7 +591,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*4);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*6);
             }
         }
         if(skill4AttackTime == true)
@@ -603,7 +603,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*2);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*1);
             }
         }
         if (skill5AttackTime == true)
