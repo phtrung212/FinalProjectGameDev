@@ -769,7 +769,7 @@ public class HuongDan : MonoBehaviour
                     attacking = true;
                     skill3Attack = false;
                     skill3EndSkill = false;
-                    skill2AttackTime = true;
+                    skill3AttackTime = true;
                     Mana.Damage(20);
                     playerAnimation.SetBool("skill3", true);
                     Skill3.GetComponent<Animator>().SetBool("skill3", true);
@@ -890,6 +890,7 @@ public class HuongDan : MonoBehaviour
                 }
                 if (skill2AttackTime == true)
                 {
+                    Debug.Log("----------");
                     skill2AttackTime = false;
                     Collider2D[] enemiesToDamege = Physics2D.OverlapCircleAll(transform.position, skill2PhamVi, QuaiLayer);
                     for (int i = 0; i < enemiesToDamege.Length; i++)

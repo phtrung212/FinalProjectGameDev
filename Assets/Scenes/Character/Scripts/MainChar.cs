@@ -483,7 +483,7 @@ public class MainChar : MonoBehaviour {
             attacking = true;
             skill3Attack = false;
             skill3EndSkill = false;
-            skill2AttackTime = true;
+            skill3AttackTime = true;
             Mana.Damage(20);
             playerAnimation.SetBool("skill3", true);
             Skill3.GetComponent<Animator>().SetBool("skill3", true);
