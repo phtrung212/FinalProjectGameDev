@@ -481,7 +481,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 450
   PlayerLayer:
     serializedVersion: 2
@@ -491,7 +491,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1310209934}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -668,7 +668,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 56
   PlayerLayer:
     serializedVersion: 2
@@ -678,7 +678,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1576618850}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -855,7 +855,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 528
   PlayerLayer:
     serializedVersion: 2
@@ -865,7 +865,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1110625271}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -1040,7 +1040,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -1057,6 +1057,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -1499,7 +1504,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 433
   PlayerLayer:
     serializedVersion: 2
@@ -1509,7 +1514,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 994812887}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -2043,7 +2048,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 454
   PlayerLayer:
     serializedVersion: 2
@@ -2053,7 +2058,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1099219454}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -2228,7 +2233,7 @@ Prefab:
     - target: {fileID: 114382802550191422, guid: 7c8a4009e59664048a8db7b5da1372bb,
         type: 2}
       propertyPath: bloodLoss
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114382802550191422, guid: 7c8a4009e59664048a8db7b5da1372bb,
         type: 2}
@@ -2239,6 +2244,11 @@ Prefab:
         type: 2}
       propertyPath: name
       value: bo10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114382802550191422, guid: 7c8a4009e59664048a8db7b5da1372bb,
+        type: 2}
+      propertyPath: experence
+      value: 20000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8a4009e59664048a8db7b5da1372bb, type: 2}
@@ -2719,7 +2729,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 319
   PlayerLayer:
     serializedVersion: 2
@@ -2729,7 +2739,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1789146028}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -2989,7 +2999,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -3006,6 +3016,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -3077,7 +3092,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -3094,6 +3109,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -3250,7 +3270,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 310
   PlayerLayer:
     serializedVersion: 2
@@ -3260,7 +3280,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 806757611}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -3437,7 +3457,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 511
   PlayerLayer:
     serializedVersion: 2
@@ -3447,7 +3467,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 889762554}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -3670,7 +3690,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 529
   PlayerLayer:
     serializedVersion: 2
@@ -3680,7 +3700,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 161934322}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -4049,7 +4069,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 47
   PlayerLayer:
     serializedVersion: 2
@@ -4059,7 +4079,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1763067045}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -4236,7 +4256,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 321
   PlayerLayer:
     serializedVersion: 2
@@ -4246,7 +4266,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 2073331066}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -4423,7 +4443,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 39
   PlayerLayer:
     serializedVersion: 2
@@ -4433,7 +4453,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1486085791}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -4732,7 +4752,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 439
   PlayerLayer:
     serializedVersion: 2
@@ -4742,7 +4762,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 450715902}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -4919,7 +4939,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 435
   PlayerLayer:
     serializedVersion: 2
@@ -4929,7 +4949,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 192825403}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -5272,7 +5292,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 427
   PlayerLayer:
     serializedVersion: 2
@@ -5282,7 +5302,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1792033356}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -5459,7 +5479,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 316
   PlayerLayer:
     serializedVersion: 2
@@ -5469,7 +5489,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1911919900}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -5782,7 +5802,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 455
   PlayerLayer:
     serializedVersion: 2
@@ -5792,7 +5812,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 2037675674}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -5969,7 +5989,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 413
   PlayerLayer:
     serializedVersion: 2
@@ -5979,7 +5999,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1531789555}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -6466,7 +6486,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 534
   PlayerLayer:
     serializedVersion: 2
@@ -6476,7 +6496,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1320178177}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -7011,7 +7031,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 434
   PlayerLayer:
     serializedVersion: 2
@@ -7021,7 +7041,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 811128414}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -7272,7 +7292,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 420
   PlayerLayer:
     serializedVersion: 2
@@ -7282,7 +7302,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 518977358}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -7459,7 +7479,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 453
   PlayerLayer:
     serializedVersion: 2
@@ -7469,7 +7489,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1360889912}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -7693,7 +7713,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 457
   PlayerLayer:
     serializedVersion: 2
@@ -7703,7 +7723,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 2078194288}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -7966,7 +7986,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 536
   PlayerLayer:
     serializedVersion: 2
@@ -7976,7 +7996,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 445014655}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -8153,7 +8173,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 424
   PlayerLayer:
     serializedVersion: 2
@@ -8163,7 +8183,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 551622040}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -8340,7 +8360,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 55
   PlayerLayer:
     serializedVersion: 2
@@ -8350,7 +8370,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1745748078}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -8710,7 +8730,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 412
   PlayerLayer:
     serializedVersion: 2
@@ -8720,7 +8740,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1665966330}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -9014,7 +9034,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 524
   PlayerLayer:
     serializedVersion: 2
@@ -9024,7 +9044,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 187119166}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -9201,7 +9221,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 521
   PlayerLayer:
     serializedVersion: 2
@@ -9211,7 +9231,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 300307535}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -9692,7 +9712,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 58
   PlayerLayer:
     serializedVersion: 2
@@ -9702,7 +9722,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 465333090}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -9879,7 +9899,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 532
   PlayerLayer:
     serializedVersion: 2
@@ -9889,7 +9909,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 751246618}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -10066,7 +10086,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 431
   PlayerLayer:
     serializedVersion: 2
@@ -10076,7 +10096,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 483065457}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -10375,7 +10395,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 518
   PlayerLayer:
     serializedVersion: 2
@@ -10385,7 +10405,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 652571223}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -10609,7 +10629,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 519
   PlayerLayer:
     serializedVersion: 2
@@ -10619,7 +10639,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 457219638}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -10796,7 +10816,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 442
   PlayerLayer:
     serializedVersion: 2
@@ -10806,7 +10826,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1144858405}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -11058,7 +11078,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 447
   PlayerLayer:
     serializedVersion: 2
@@ -11068,7 +11088,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 2055482762}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -11320,7 +11340,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 54
   PlayerLayer:
     serializedVersion: 2
@@ -11330,7 +11350,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1501887550}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -11817,7 +11837,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 313
   PlayerLayer:
     serializedVersion: 2
@@ -11827,7 +11847,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1854444386}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -12051,7 +12071,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 531
   PlayerLayer:
     serializedVersion: 2
@@ -12061,7 +12081,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1709873744}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -12331,7 +12351,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 322
   PlayerLayer:
     serializedVersion: 2
@@ -12341,7 +12361,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 499239654}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -12565,7 +12585,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 320
   PlayerLayer:
     serializedVersion: 2
@@ -12575,7 +12595,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 2858615}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -12752,7 +12772,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 440
   PlayerLayer:
     serializedVersion: 2
@@ -12762,7 +12782,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1443234925}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -12939,7 +12959,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 35
   PlayerLayer:
     serializedVersion: 2
@@ -12949,7 +12969,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 631440492}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -13126,7 +13146,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 525
   PlayerLayer:
     serializedVersion: 2
@@ -13136,7 +13156,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 402079801}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -13407,7 +13427,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 530
   PlayerLayer:
     serializedVersion: 2
@@ -13417,7 +13437,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 652138555}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -13594,7 +13614,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 410
   PlayerLayer:
     serializedVersion: 2
@@ -13604,7 +13624,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 933721168}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -13781,7 +13801,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 38
   PlayerLayer:
     serializedVersion: 2
@@ -13791,7 +13811,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 188816913}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -13968,7 +13988,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 430
   PlayerLayer:
     serializedVersion: 2
@@ -13978,7 +13998,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 217030696}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -14155,7 +14175,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 44
   PlayerLayer:
     serializedVersion: 2
@@ -14165,7 +14185,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1261688115}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -14899,7 +14919,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 41
   PlayerLayer:
     serializedVersion: 2
@@ -14909,7 +14929,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 845222328}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -15133,7 +15153,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 318
   PlayerLayer:
     serializedVersion: 2
@@ -15143,7 +15163,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1386934191}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -15320,7 +15340,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 527
   PlayerLayer:
     serializedVersion: 2
@@ -15330,7 +15350,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1026145001}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -15507,7 +15527,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 513
   PlayerLayer:
     serializedVersion: 2
@@ -15517,7 +15537,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 826691093}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -15938,7 +15958,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 429
   PlayerLayer:
     serializedVersion: 2
@@ -15948,7 +15968,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1886146779}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -16125,7 +16145,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 48
   PlayerLayer:
     serializedVersion: 2
@@ -16135,7 +16155,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1113042395}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -16406,7 +16426,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 517
   PlayerLayer:
     serializedVersion: 2
@@ -16416,7 +16436,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1907948603}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -16539,7 +16559,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -16556,6 +16576,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -16754,7 +16779,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -16771,6 +16796,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -16880,7 +16910,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 49
   PlayerLayer:
     serializedVersion: 2
@@ -16890,7 +16920,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 432135266}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -17114,7 +17144,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 415
   PlayerLayer:
     serializedVersion: 2
@@ -17124,7 +17154,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1941511779}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -17301,7 +17331,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 414
   PlayerLayer:
     serializedVersion: 2
@@ -17311,7 +17341,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 522532930}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -17670,7 +17700,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 510
   PlayerLayer:
     serializedVersion: 2
@@ -17680,7 +17710,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 220582859}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -17904,7 +17934,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 324
   PlayerLayer:
     serializedVersion: 2
@@ -17914,7 +17944,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1693838606}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -18138,7 +18168,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 443
   PlayerLayer:
     serializedVersion: 2
@@ -18148,7 +18178,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1224070513}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -18447,7 +18477,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 514
   PlayerLayer:
     serializedVersion: 2
@@ -18457,7 +18487,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 823179021}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -18634,7 +18664,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 520
   PlayerLayer:
     serializedVersion: 2
@@ -18644,7 +18674,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 20993621}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -19198,7 +19228,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 523
   PlayerLayer:
     serializedVersion: 2
@@ -19208,7 +19238,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 191793667}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -19432,7 +19462,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 323
   PlayerLayer:
     serializedVersion: 2
@@ -19442,7 +19472,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1736772558}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -19619,7 +19649,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 425
   PlayerLayer:
     serializedVersion: 2
@@ -19629,7 +19659,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 825330567}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -19946,7 +19976,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 426
   PlayerLayer:
     serializedVersion: 2
@@ -19956,7 +19986,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1613939682}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -20301,7 +20331,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 37
   PlayerLayer:
     serializedVersion: 2
@@ -20311,7 +20341,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1611673396}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -20535,7 +20565,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 36
   PlayerLayer:
     serializedVersion: 2
@@ -20545,7 +20575,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1069413319}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -20769,7 +20799,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 45
   PlayerLayer:
     serializedVersion: 2
@@ -20779,7 +20809,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1126855286}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -21131,7 +21161,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 315
   PlayerLayer:
     serializedVersion: 2
@@ -21141,7 +21171,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 680109739}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -21459,7 +21489,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 417
   PlayerLayer:
     serializedVersion: 2
@@ -21469,7 +21499,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1385345714}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -21693,7 +21723,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 419
   PlayerLayer:
     serializedVersion: 2
@@ -21703,7 +21733,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 939220763}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -22198,7 +22228,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 418
   PlayerLayer:
     serializedVersion: 2
@@ -22208,7 +22238,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 201491723}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -22554,7 +22584,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 535
   PlayerLayer:
     serializedVersion: 2
@@ -22564,7 +22594,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1756043937}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -22741,7 +22771,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 526
   PlayerLayer:
     serializedVersion: 2
@@ -22751,7 +22781,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 358956151}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -23022,7 +23052,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 515
   PlayerLayer:
     serializedVersion: 2
@@ -23032,7 +23062,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1396361496}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -23256,7 +23286,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 416
   PlayerLayer:
     serializedVersion: 2
@@ -23266,7 +23296,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1245638730}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -23537,7 +23567,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 446
   PlayerLayer:
     serializedVersion: 2
@@ -23547,7 +23577,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1611176604}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -23920,7 +23950,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 437
   PlayerLayer:
     serializedVersion: 2
@@ -23930,7 +23960,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 218051287}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -24107,7 +24137,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 43
   PlayerLayer:
     serializedVersion: 2
@@ -24117,7 +24147,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1431676881}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -24294,7 +24324,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 522
   PlayerLayer:
     serializedVersion: 2
@@ -24304,7 +24334,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1733824414}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -24481,7 +24511,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 34
   PlayerLayer:
     serializedVersion: 2
@@ -24491,7 +24521,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1898907465}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -24715,7 +24745,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 42
   PlayerLayer:
     serializedVersion: 2
@@ -24725,7 +24755,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1665710205}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -24902,7 +24932,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 312
   PlayerLayer:
     serializedVersion: 2
@@ -24912,7 +24942,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 576645069}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -25089,7 +25119,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 411
   PlayerLayer:
     serializedVersion: 2
@@ -25099,7 +25129,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 774510331}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -25276,7 +25306,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 438
   PlayerLayer:
     serializedVersion: 2
@@ -25286,7 +25316,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 353040960}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -25697,7 +25727,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 451
   PlayerLayer:
     serializedVersion: 2
@@ -25707,7 +25737,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1198593677}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -25931,7 +25961,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 317
   PlayerLayer:
     serializedVersion: 2
@@ -25941,7 +25971,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 179748172}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -26118,7 +26148,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 516
   PlayerLayer:
     serializedVersion: 2
@@ -26128,7 +26158,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1547162053}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -26305,7 +26335,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 14
-  experence: 100
+  experence: 500000
   name: 59
   PlayerLayer:
     serializedVersion: 2
@@ -26315,7 +26345,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.8
   PlayerCheckPoint: {fileID: 1051197742}
   enemy: {fileID: 1479347890586906, guid: bd4d63f551db1e642a68fc4ff2ce6c93, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -26492,7 +26522,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 449
   PlayerLayer:
     serializedVersion: 2
@@ -26502,7 +26532,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1287678703}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -26684,7 +26714,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 311
   PlayerLayer:
     serializedVersion: 2
@@ -26694,7 +26724,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 401906709}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -26946,7 +26976,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 456
   PlayerLayer:
     serializedVersion: 2
@@ -26956,7 +26986,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 343521598}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -27095,7 +27125,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -27112,6 +27142,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1017239277}
+    - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
+        type: 2}
+      propertyPath: experence
+      value: 500000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e292e3ad8892474b80842e956699dab, type: 2}
   m_IsPrefabAsset: 0
@@ -27221,7 +27256,7 @@ MonoBehaviour:
   high: 2.5
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 314
   PlayerLayer:
     serializedVersion: 2
@@ -27231,7 +27266,7 @@ MonoBehaviour:
   PlayerCheckRadius: 2.4
   PlayerCheckPoint: {fileID: 1073325744}
   enemy: {fileID: 1939658765352904, guid: 46f4b0a83bd3cb94d90255d7b0fa3a1f, type: 2}
-  bloodLoss: 35
+  bloodLoss: 125
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -27408,7 +27443,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 428
   PlayerLayer:
     serializedVersion: 2
@@ -27418,7 +27453,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 871924341}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -27595,7 +27630,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 46
   PlayerLayer:
     serializedVersion: 2
@@ -27605,7 +27640,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 188440240}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -27829,7 +27864,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 444
   PlayerLayer:
     serializedVersion: 2
@@ -27839,7 +27874,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 1666393115}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10
@@ -28109,7 +28144,7 @@ MonoBehaviour:
   high: 2.8
   weigh: -2
   Level: 16
-  experence: 100
+  experence: 500000
   name: 432
   PlayerLayer:
     serializedVersion: 2
@@ -28119,7 +28154,7 @@ MonoBehaviour:
   PlayerCheckRadius: 1.2
   PlayerCheckPoint: {fileID: 2092669683}
   enemy: {fileID: 1042821575424186, guid: 6f692660ef6693e4cac5acd2d1b98e9e, type: 2}
-  bloodLoss: 30
+  bloodLoss: 90
   player: {fileID: 1017239277}
   speed: 1
   jumpSpeed: 10

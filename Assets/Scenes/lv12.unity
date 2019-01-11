@@ -178,7 +178,7 @@ Prefab:
     - target: {fileID: 114593993527198216, guid: ef851d202b462d24c9699457d322f83e,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114593993527198216, guid: ef851d202b462d24c9699457d322f83e,
         type: 2}
@@ -337,7 +337,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -413,7 +413,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -890,7 +890,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -972,7 +972,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -1052,7 +1052,7 @@ Prefab:
     - target: {fileID: 114395058257828946, guid: 5f1fff127f6750344a7c130a1227c5f9,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114395058257828946, guid: 5f1fff127f6750344a7c130a1227c5f9,
         type: 2}
@@ -1274,7 +1274,7 @@ Prefab:
     - target: {fileID: 114028753649522966, guid: 7273ed6ae29d3ff4cbd2a36737afb686,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114028753649522966, guid: 7273ed6ae29d3ff4cbd2a36737afb686,
         type: 2}
@@ -1350,7 +1350,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -1431,7 +1431,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -1507,7 +1507,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -1625,7 +1625,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -1701,7 +1701,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -1781,7 +1781,7 @@ Prefab:
     - target: {fileID: 114382802550191422, guid: 7c8a4009e59664048a8db7b5da1372bb,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114382802550191422, guid: 7c8a4009e59664048a8db7b5da1372bb,
         type: 2}
@@ -1899,7 +1899,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -2171,7 +2171,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -2247,7 +2247,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -2377,7 +2377,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -2546,7 +2546,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -2781,7 +2781,7 @@ Prefab:
     - target: {fileID: 114885588980920282, guid: f30dc806e7806e34fa2469da3cb64a55,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114885588980920282, guid: f30dc806e7806e34fa2469da3cb64a55,
         type: 2}
@@ -3012,7 +3012,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -3089,7 +3089,7 @@ Prefab:
     - target: {fileID: 114851802079847358, guid: f7b848f2672fe1d44b525d9bbe1ff05f,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114851802079847358, guid: f7b848f2672fe1d44b525d9bbe1ff05f,
         type: 2}
@@ -3245,7 +3245,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -3396,7 +3396,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -3472,7 +3472,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -3548,7 +3548,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -3624,7 +3624,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -3700,7 +3700,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -3851,7 +3851,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -3927,7 +3927,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -4083,7 +4083,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -4159,7 +4159,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -4235,7 +4235,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -4307,7 +4307,7 @@ Prefab:
     - target: {fileID: 114002821087658434, guid: 031e8ec2427718c4ebfabdcbda9f2d35,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114002821087658434, guid: 031e8ec2427718c4ebfabdcbda9f2d35,
         type: 2}
@@ -4383,7 +4383,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -4455,7 +4455,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -4536,7 +4536,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -4620,7 +4620,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -4700,7 +4700,7 @@ Prefab:
     - target: {fileID: 114278541718418164, guid: df676e00cc1b417439570ec5db988317,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114278541718418164, guid: df676e00cc1b417439570ec5db988317,
         type: 2}
@@ -4780,7 +4780,7 @@ Prefab:
     - target: {fileID: 114964169393528416, guid: 2a7bd502b56f4e042a029503417b57a9,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114964169393528416, guid: 2a7bd502b56f4e042a029503417b57a9,
         type: 2}
@@ -4931,7 +4931,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -5007,7 +5007,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -5137,7 +5137,7 @@ Prefab:
     - target: {fileID: 114851802079847358, guid: f7b848f2672fe1d44b525d9bbe1ff05f,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114851802079847358, guid: f7b848f2672fe1d44b525d9bbe1ff05f,
         type: 2}
@@ -5217,7 +5217,7 @@ Prefab:
     - target: {fileID: 114107918737390482, guid: 4c0a1000014be5a4ea94b86145068a04,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114107918737390482, guid: 4c0a1000014be5a4ea94b86145068a04,
         type: 2}
@@ -5510,7 +5510,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -5586,7 +5586,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -5785,7 +5785,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -5861,7 +5861,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -5945,7 +5945,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -6063,7 +6063,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -6139,7 +6139,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -6443,7 +6443,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -6567,7 +6567,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -6643,7 +6643,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -6719,7 +6719,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -6887,7 +6887,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -6969,7 +6969,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7256,7 +7256,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7332,7 +7332,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7529,7 +7529,7 @@ Prefab:
     - target: {fileID: 114044737205033834, guid: 6e9cf91943e7d204bb20e375559187c7,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114044737205033834, guid: 6e9cf91943e7d204bb20e375559187c7,
         type: 2}
@@ -7680,7 +7680,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7756,7 +7756,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7907,7 +7907,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -7983,7 +7983,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -8063,7 +8063,7 @@ Prefab:
     - target: {fileID: 114583043690128454, guid: d0dd572ae19948942a99801184f62cec,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114583043690128454, guid: d0dd572ae19948942a99801184f62cec,
         type: 2}
@@ -8185,7 +8185,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -8265,7 +8265,7 @@ Prefab:
     - target: {fileID: 114490283483334770, guid: 38871a952b31c5c44ab0740cd73338d3,
         type: 2}
       propertyPath: bloodLoss
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114490283483334770, guid: 38871a952b31c5c44ab0740cd73338d3,
         type: 2}
@@ -8463,7 +8463,7 @@ Prefab:
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114923937471716792, guid: be7035a4e43d2f345ad6fe64a11c9b6e,
         type: 2}
@@ -8547,7 +8547,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -8634,7 +8634,7 @@ Prefab:
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114129999761206610, guid: 7e292e3ad8892474b80842e956699dab,
         type: 2}
@@ -9030,7 +9030,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -9181,7 +9181,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
@@ -9253,7 +9253,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -9329,7 +9329,7 @@ Prefab:
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114341004581598384, guid: f6918a22f2272aa4fa50027ae58488d5,
         type: 2}
@@ -9405,7 +9405,7 @@ Prefab:
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
       propertyPath: bloodLoss
-      value: 45
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 114754501680815002, guid: 08913c3a0c2e9f84a923aa19db6533f7,
         type: 2}
