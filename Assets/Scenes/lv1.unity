@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: HPinput
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -636,6 +641,11 @@ PrefabInstance:
       propertyPath: HPinput
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -773,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: name
       value: Map1_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -1237,6 +1252,11 @@ PrefabInstance:
       propertyPath: HPinput
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -1326,6 +1346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: name
       value: Map1_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -1596,6 +1621,11 @@ PrefabInstance:
       propertyPath: HPinput
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -1789,6 +1819,11 @@ PrefabInstance:
       propertyPath: HPinput
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -1944,6 +1979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: name
       value: Map1_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -2162,6 +2202,11 @@ PrefabInstance:
       propertyPath: name
       value: Map1_13
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -2337,6 +2382,11 @@ PrefabInstance:
       propertyPath: name
       value: Map1_11
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -2445,6 +2495,11 @@ PrefabInstance:
       propertyPath: name
       value: Map1_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5251102225718449271, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a49d3f395261e44bb87af1a02b7fca, type: 3}
@@ -2539,6 +2594,11 @@ PrefabInstance:
     - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
         type: 3}
       propertyPath: HPinput
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
       value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -2659,6 +2719,11 @@ PrefabInstance:
     - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
         type: 3}
       propertyPath: HPinput
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275792519354729002, guid: 13a49d3f395261e44bb87af1a02b7fca,
+        type: 3}
+      propertyPath: experence
       value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:

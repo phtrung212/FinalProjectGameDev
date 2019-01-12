@@ -11,6 +11,7 @@ public class TienNhapDiaDo : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Application.targetFrameRate = 20;
     }
 	
 	// Update is called once per frame
@@ -41,6 +42,7 @@ public class TienNhapDiaDo : MonoBehaviour {
             }
             Debug.Log(dataBase.lvMap);
             SceneManager.LoadScene(dataBase.lvMap + 1, LoadSceneMode.Single);
+            SceneManager.UnloadSceneAsync(0);
         }
     }
 }

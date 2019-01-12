@@ -9,8 +9,8 @@ public class Play : MonoBehaviour {
     public int levelNeedToJoin;
 	// Use this for initialization
 	void Start () {
-        
-	}
+        Application.targetFrameRate = 20;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,8 +23,11 @@ public class Play : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log(player.GetComponent<OpenMap>().dataBase.lv);
-            if(player.GetComponent<OpenMap>().dataBase.lv+1 >= levelNeedToJoin)
+            if (player.GetComponent<OpenMap>().dataBase.lv + 1 >= levelNeedToJoin)
+            {
                 SceneManager.LoadScene(nextMap, LoadSceneMode.Single);
+                SceneManager.UnloadSceneAsync(1);
+            }
         }
     }
 }

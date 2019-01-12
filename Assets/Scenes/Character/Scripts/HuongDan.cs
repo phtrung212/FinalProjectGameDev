@@ -157,6 +157,7 @@ public class HuongDan : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Application.targetFrameRate = 20;
         HuongDanThread = new Thread(new ThreadStart(printHuongDan));
         HuongDanThread.Start();
         arrayNote = new List<string>();
@@ -380,6 +381,7 @@ public class HuongDan : MonoBehaviour
         {
             writeData(currentLevelMap);
             SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.UnloadSceneAsync(currentLevelMap + 1);
         }
         //database dataBase = readData();
         //level = dataBase.lv;
@@ -588,7 +590,7 @@ public class HuongDan : MonoBehaviour
                         float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<QuaiHuongDan>().Level) * 0.1f * dame;
                         int damgBlood = (int)damg;
                         if (damgBlood > 0)
-                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage(damgBlood * 1);
+                            enemiesToDamege[0].GetComponent<QuaiHuongDan>().HP.Damage((int)(damgBlood * 1.2));
                     }
                 }
             }
@@ -668,7 +670,7 @@ public class HuongDan : MonoBehaviour
                     skill5Attack = false;
                     skill5EndSkill = false;
                     skill5AttackTime = true;
-                    Mana.Damage(2);
+                    Mana.Damage(4);
                     playerAnimation.SetBool("skill5", true);
                     Skill5.GetComponent<Animator>().SetBool("skill5", true);
                     oThread5 = new Thread(new ThreadStart(Skill5Func));

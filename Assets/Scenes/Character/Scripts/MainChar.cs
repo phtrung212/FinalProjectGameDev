@@ -135,7 +135,7 @@ public class MainChar : MonoBehaviour {
     bool autoRun = false;
     // Use this for initialization
     void Start () {
-        
+        Application.targetFrameRate = 20;
         arrayNote = new List<string>();
         noteThread = new Thread(new ThreadStart(countTimeNote));
         noteThread.Start();
@@ -320,6 +320,7 @@ public class MainChar : MonoBehaviour {
         {
             writeData(currentLevelMap);
             SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.UnloadSceneAsync(currentLevelMap + 1);
         }
         //database dataBase = readData();
         //level = dataBase.lv;
@@ -371,7 +372,6 @@ public class MainChar : MonoBehaviour {
                 Chay.Play();
             }
             playerAnimation.SetFloat("Speed", 1);
-            Debug.Log(moment);
             rigidBody.velocity = new Vector2(moment * speedCurrence, rigidBody.velocity.y);
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
@@ -416,7 +416,7 @@ public class MainChar : MonoBehaviour {
             skill5Attack = false;
             skill5EndSkill = false;
             skill5AttackTime = true;
-            Mana.Damage(2);
+            Mana.Damage(4);
             playerAnimation.SetBool("skill5", true);
             Skill5.GetComponent<Animator>().SetBool("skill5", true);
             oThread5 = new Thread(new ThreadStart(Skill5Func));
@@ -603,7 +603,7 @@ public class MainChar : MonoBehaviour {
                 float damg = dame + (Experence.getLevel() - enemiesToDamege[0].GetComponent<AutoAttack>().Level) * 0.1f * dame;
                 int damgBlood = (int)damg;
                 if (damgBlood > 0)
-                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage(damgBlood*1);
+                    enemiesToDamege[0].GetComponent<AutoAttack>().HP.Damage((int)(damgBlood*1.2));
             }
         }
         if (skill5AttackTime == true)

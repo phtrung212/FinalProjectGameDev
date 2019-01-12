@@ -59,7 +59,6 @@ public class AutoAttack : MonoBehaviour {
         }
         else
             flag = false;
-        Debug.Log(flag);
         healthBar.transform.position = new Vector3(transform.position.x + weigh, transform.position.y + high);
         if (HP.getHP() <= 0)
         {
@@ -91,7 +90,8 @@ public class AutoAttack : MonoBehaviour {
         }
         if (Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) < PhamViMaxCurrence && Mathf.Abs(Mathf.Sqrt(Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2))) >= PhamViMin)
         {
-            PhamViMaxCurrence = 20;
+            if(PhamViMaxCurrence < 20)
+                PhamViMaxCurrence = 20;
             if (HP.getHP() > 0) {
                 player.GetComponent<MainChar>().setAttacking(name);
             }

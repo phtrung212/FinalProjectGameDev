@@ -36,10 +36,11 @@ public class NPCHuongDan : MonoBehaviour
                 {
                     collision.GetComponent<HuongDan>().writeData(nextMap - 1);
                     SceneManager.LoadScene(nextMap+1, LoadSceneMode.Single);
+                    SceneManager.UnloadSceneAsync(nextMap);
                 }
                 else
                 {
-                    collision.GetComponent<HuongDan>().Note2.text = "*** Đường đi phía trước đầy nguy hiểm. Đại hiệp cần đạt " + level.ToString() + " cấp để vượt cảnh ***";
+                    collision.GetComponent<HuongDan>().addNote("*** Đường đi phía trước đầy nguy hiểm. Đại hiệp cần đạt " + level.ToString() + " cấp để vượt cảnh ***");
                 }
             }
             else
